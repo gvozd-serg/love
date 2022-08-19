@@ -74,6 +74,47 @@ jQuery(document).ready(function($) {
 		dots: true,
 	});
 
+	$('.js-happy-slider').slick({
+		slidesToShow: 3,
+		prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icon-arrow"></i></div>',
+		nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icon-arrow"></i></div>',
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 1023,
+				settings: {
+					slidesToShow: 2,
+					prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icon-arrow"></i></div>',
+					nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icon-arrow"></i></div>',
+					dots: true,
+				}
+			},
+			{
+				breakpoint: 560,
+				settings: {
+					slidesToShow: 1,
+					prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icon-arrow"></i></div>',
+					nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icon-arrow"></i></div>',
+					dots: true,
+				}
+			},
+		]
+	});
+
+	$('.js-news-slider').slick({
+		slidesToShow: 1,
+		prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icon-arrow"></i></div>',
+		nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icon-arrow"></i></div>',
+		vertical: true,
+		verticalSwiping: true,
+	});
+
+	let viewportWidth = $(window).width();
+
+	if (viewportWidth < 767) {
+		$('.js-news-slider').slick('unslick');
+	}
+
 	var swiper = new Swiper(".js-ladies-slider", {
 		slidesPerView: 'auto',
 		spaceBetween: 0,
@@ -98,4 +139,23 @@ jQuery(document).ready(function($) {
 			}
 		},
 	});
+
+	const currentTime = () => {
+		const el = document.querySelector('.js-tracker');
+
+		let date = new Date();
+		let hh = date.getHours();
+		let mm = date.getMinutes();
+		let ss = date.getSeconds();
+
+		hh = hh < 10 ? `0${hh}` : hh;
+		mm = mm < 10 ? `0${mm}` : mm;
+
+		let time = `${hh}:${mm}`;
+
+		el.innerHTML = time;
+	};
+
+	currentTime();
+	setInterval(currentTime, 1000);
 })

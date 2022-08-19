@@ -1,7 +1,159 @@
-footer{
-  height: 100px;
-  background: $primary-color;
-  margin-top: auto;
+.footer{
+  background-color: #1F232B;
+  padding: 50px 0;
+
+  .logo-holder {
+	display: flex;
+	align-items: center;
+
+	.logo-block {
+	  margin-right: 32px;
+
+	  @include media('>=tablet') {
+		margin-right: 57px;
+	  }
+
+	  &:last-of-type {
+		margin-right: 0;
+	  }
+	}
+  }
+
+  .contact-holder {
+
+	@include media('>=tablet') {
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: flex-end;
+	  width: 50%;
+	}
+
+	a:not(.watsup-link) {
+	  text-decoration: none;
+	}
+
+	.email {
+	  font-weight: 600;
+	  font-size: 24px;
+	  line-height: 22px;
+	  text-decoration-line: underline;
+	  color: #FFFFFF;
+	   @include media('>=tablet') {
+		 margin-right: 110px;
+	   }
+	}
+
+	.watsup-link {
+	  padding-top: 0;
+	  color: #fff;
+	  font-size: 24px;
+	  line-height: 22px;
+
+	  i {
+		top: 0;
+	  }
+	}
+
+	.tracker-holder {
+	  width: 100%;
+	  text-align:  center;
+
+	  @include media('>=tablet') {
+		text-align: right;
+	  }
+	}
+  }
+
+  .footer-bottom {
+	width: 100%;
+	margin-bottom: 40px;
+
+	@include media('>=tablet') {
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	}
+  }
+
+  .privacy-list {
+	text-align: center;
+
+	@include media('>=tablet') {
+	  display: flex;
+	}
+
+	li {
+	  padding: 0;
+
+	  @include media('>=tablet') {
+		margin-right: 70px;
+	  }
+
+	  &:before {
+		display: none;
+	  }
+
+	  a {
+		color: #fff;
+	  }
+	}
+  }
+
+  .footer-socials {
+	padding-top: 28px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	@include media('>=tablet') {
+	  justify-content: flex-end;
+	}
+
+	li {
+	  a {
+		color: #fff;
+		text-decoration: none;
+
+		&:hover {
+		  color: #BF0F0D;
+		}
+	  }
+	  &:before {
+		display: none;
+	  }
+	}
+  }
+
+  .container {
+	@include media('>=tablet') {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: flex-start;
+	  flex-wrap: wrap;
+	}
+  }
+
+  .copy-holder {
+	position: relative;
+	width: 100%;
+	padding-top: 30px;
+	text-align: center;
+	border-top: 1px solid #272C35;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.other-copy-link {
+	  @include media('>=tablet') {
+		position: absolute;
+		//top: 0;
+		right: 0;
+	  }
+	}
+
+	a {
+	  color: #fff;
+	}
+  }
 }
 
- 
