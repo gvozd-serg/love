@@ -254,6 +254,14 @@
 }
 
 .title {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-duration: var(--animate-duration);
+  animation-duration: var(--animate-duration);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
   position: relative;
   display: inline-block;
   font-size: 30px;
@@ -420,17 +428,26 @@
 	flex-wrap: wrap;
 	padding-left: 20px;
 	padding-right: 20px;
+	text-align: center;
 
 	@include media('>=tablet') {
 	  width: 50%;
 	}
 
 	&:first-of-type {
+	  -webkit-animation-duration: 1s;
+	  animation-duration: 1s;
+	  -webkit-animation-duration: var(--animate-duration);
+	  animation-duration: var(--animate-duration);
+	  -webkit-animation-fill-mode: both;
+	  animation-fill-mode: both;
+	  -webkit-animation-name: fadeInLeft;
+	  animation-name: fadeInLeft;
 	  padding-top: 80px;
 
 	  @include media('>=tablet') {
 		padding: 60px 55px;
-		text-align: right;
+		text-align: right !important;
 	  }
 
 	  &:after {
@@ -456,9 +473,18 @@
 	}
 
 	&:last-of-type {
+	  -webkit-animation-duration: 1s;
+	  animation-duration: 1s;
+	  -webkit-animation-duration: var(--animate-duration);
+	  animation-duration: var(--animate-duration);
+	  -webkit-animation-fill-mode: both;
+	  animation-fill-mode: both;
+	  -webkit-animation-name: fadeInRight;
+	  animation-name: fadeInRight;
 	  padding-bottom: 80px;
 
 	  @include media('>=tablet') {
+		text-align: left !important;
 		top: -87px;
 		padding: 60px 55px;
 		box-shadow: 0 8px 30px 3px rgba(18, 18, 18, 0.4);
