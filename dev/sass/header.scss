@@ -12,7 +12,15 @@
 	padding: 0;
   }
 
+  @include media('>=1440px') {
+	padding-left: calc((100vw - 1600px)/2);
+  }
+
   &.active {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	.nav {
 	  opacity: 1;
 	  visibility: visible;

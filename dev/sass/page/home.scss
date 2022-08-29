@@ -181,6 +181,7 @@
 	background-color: $secondary-color;
 	color: #fff;
 	font-size: 24px;
+	font-family: $font-secondary;
 	line-height: 170%;
 	padding: 50px 20px;
 	display: flex;
@@ -258,14 +259,6 @@
 }
 
 .title {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-duration: var(--animate-duration);
-  animation-duration: var(--animate-duration);
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
   position: relative;
   display: inline-block;
   font-size: 30px;
@@ -437,11 +430,19 @@
 	top: 70%;
 
 	&__next {
-	  right: -94px;
+	  right: -35px;
 	}
 
 	&__prev {
-	  left: -94px;
+	  left: -35px;
+	}
+  }
+
+  .container {
+	max-width: 1700px;
+
+	@include media('>=tablet') {
+	  padding: 0 40px;
 	}
   }
 }
@@ -564,14 +565,6 @@
 	}
 
 	&:first-of-type {
-	  -webkit-animation-duration: 1s;
-	  animation-duration: 1s;
-	  -webkit-animation-duration: var(--animate-duration);
-	  animation-duration: var(--animate-duration);
-	  -webkit-animation-fill-mode: both;
-	  animation-fill-mode: both;
-	  -webkit-animation-name: fadeInLeft;
-	  animation-name: fadeInLeft;
 	  padding-top: 80px;
 
 	  @include media('>=tablet') {
@@ -602,21 +595,15 @@
 	}
 
 	&:last-of-type {
-	  -webkit-animation-duration: 1s;
-	  animation-duration: 1s;
-	  -webkit-animation-duration: var(--animate-duration);
-	  animation-duration: var(--animate-duration);
-	  -webkit-animation-fill-mode: both;
-	  animation-fill-mode: both;
-	  -webkit-animation-name: fadeInRight;
-	  animation-name: fadeInRight;
 	  padding-bottom: 80px;
+	  margin-bottom: 50px;
 
 	  @include media('>=tablet') {
 		text-align: left !important;
 		top: -87px;
 		padding: 60px 55px;
 		box-shadow: 0 8px 30px 3px rgba(18, 18, 18, 0.4);
+		margin-bottom: 0;
 	  }
 	}
   }
@@ -864,9 +851,11 @@
 
   &__img-list {
 	display: flex;
+	margin: 0 0 40px;
 
 	@include media('>=tablet') {
 	  width: 50%;
+	  margin: 0;
 	}
   }
 
@@ -1237,4 +1226,8 @@
 	  background-color: #fff;
 	}
   }
+}
+
+.fancybox-close-small {
+  background-color: #fff;
 }

@@ -20,16 +20,25 @@
   }
 
   .contact-holder {
+	text-align: center;
+	padding-top: 30px;
 
 	@include media('>=tablet') {
 	  display: flex;
 	  flex-wrap: wrap;
 	  justify-content: flex-end;
 	  width: 50%;
+	  padding-top: 0;
 	}
 
 	a:not(.watsup-link) {
 	  text-decoration: none;
+	  display: inline-block;
+	  margin-bottom: 30px;
+
+	  @include media('>=tablet') {
+		margin-bottom: 0;
+	  }
 	}
 
 	.email {
@@ -48,6 +57,7 @@
 	  color: #fff;
 	  font-size: 24px;
 	  line-height: 22px;
+	  display: inline-block;
 
 	  i {
 		top: 0;

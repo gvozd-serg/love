@@ -1,6 +1,7 @@
 jQuery(document).ready(function($) {
-	AOS.init();
-    $(".fancybox").fancybox();
+
+
+	$(".fancybox").fancybox();
     $('.nice_Select').niceSelect();
 
     $(window).scroll(function() {
@@ -13,9 +14,10 @@ jQuery(document).ready(function($) {
 
     $(function() {
         $(".muve-top").click(function() {
-            $("html,body").animate({
-                scrollTop: $(".thetop").offset().top
-            }, "1000");
+			var top = $(".thetop").offset().top;
+			$('html, body').animate({
+				scrollTop: top
+			},3000, 'easeOutExpo');
             return false
         })
     })
@@ -222,4 +224,16 @@ jQuery(document).ready(function($) {
 
 	currentTime();
 	setInterval(currentTime, 1000);
+
+	AOS.init({
+		duration: 1000,
+	});
+
+	document.addEventListener('aos:in', ({ detail }) => {
+		console.log('animated in', detail);
+	});
+
+	document.addEventListener('aos:out', ({ detail }) => {
+		console.log('animated out', detail);
+	});
 })
