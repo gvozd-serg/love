@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-
+	AOS.init();
     $(".fancybox").fancybox();
     $('.nice_Select').niceSelect();
 
@@ -69,23 +69,23 @@ jQuery(document).ready(function($) {
 	})
 
 	$('.js-visual-slider').slick({
-		prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icon-arrow"></i></div>',
-		nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icon-arrow"></i></div>',
+		prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icomoon-arrow"></i></div>',
+		nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icomoon-arrow"></i></div>',
 		dots: true,
 	});
 
 	$('.js-happy-slider').slick({
 		slidesToShow: 3,
-		prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icon-arrow"></i></div>',
-		nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icon-arrow"></i></div>',
-		dots: true,
+		prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icomoon-arrow"></i></div>',
+		nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icomoon-arrow"></i></div>',
+		dots: false,
 		responsive: [
 			{
 				breakpoint: 1023,
 				settings: {
 					slidesToShow: 2,
-					prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icon-arrow"></i></div>',
-					nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icon-arrow"></i></div>',
+					prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icomoon-arrow"></i></div>',
+					nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icomoon-arrow"></i></div>',
 					dots: true,
 				}
 			},
@@ -93,18 +93,82 @@ jQuery(document).ready(function($) {
 				breakpoint: 560,
 				settings: {
 					slidesToShow: 1,
-					prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icon-arrow"></i></div>',
-					nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icon-arrow"></i></div>',
+					prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icomoon-arrow"></i></div>',
+					nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icomoon-arrow"></i></div>',
 					dots: true,
 				}
 			},
 		]
 	});
 
+	$('.js-advantages-slider').slick({
+		slidesToShow: 4,
+		prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icomoon-arrow"></i></div>',
+		nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icomoon-arrow"></i></div>',
+		dots: false,
+		responsive: [
+			{
+				breakpoint: 1279,
+				settings: {
+					slidesToShow: 3,
+					prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icomoon-arrow"></i></div>',
+					nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icomoon-arrow"></i></div>',
+					dots: false,
+				}
+			},
+			{
+				breakpoint: 1023,
+				settings: {
+					slidesToShow: 2,
+					prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icomoon-arrow"></i></div>',
+					nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icomoon-arrow"></i></div>',
+					dots: false,
+				}
+			},
+			{
+				breakpoint: 560,
+				settings: {
+					slidesToShow: 1,
+					prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icomoon-arrow"></i></div>',
+					nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icomoon-arrow"></i></div>',
+					dots: false,
+				}
+			},
+		]
+	});
+
+	$('.js-team-slider').slick({
+		slidesToShow: 3,
+		prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icomoon-arrow"></i></div>',
+		nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icomoon-arrow"></i></div>',
+		dots: false,
+		responsive: [
+			{
+				breakpoint: 1023,
+				settings: {
+					slidesToShow: 2,
+					prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icomoon-arrow"></i></div>',
+					nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icomoon-arrow"></i></div>',
+					dots: false,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icomoon-arrow"></i></div>',
+					nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icomoon-arrow"></i></div>',
+					dots: false,
+				}
+			},
+		]
+	});
+
+
 	$('.js-news-slider').slick({
 		slidesToShow: 1,
-		prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icon-arrow"></i></div>',
-		nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icon-arrow"></i></div>',
+		prevArrow: '<div class="slick-arrow slick-arrow__prev"><i class="icomoon-arrow"></i></div>',
+		nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icomoon-arrow"></i></div>',
 		vertical: true,
 		verticalSwiping: true,
 	});

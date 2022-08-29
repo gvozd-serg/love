@@ -25,6 +25,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icomoon-viber:before {
+  content: "\e90e";
+}
+.icomoon-telegram:before {
+  content: "\e90f";
+}
+
+.icomoon-alert-triangle:before {
+  content: "\e90d";
+}
+.icomoon-arrow:before {
+  content: "\e907";
+}
+.icomoon-wallet:before {
+  content: "\e90c";
+}
+
+.icomoon-play:before {
+  content: "\e90b";
+}
 .icomoon-whatsapp:before {
   content: "\e900";
 }

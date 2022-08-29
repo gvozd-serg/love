@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 17px;
+  z-index: 11;
 
   @include media('>=1320px') {
 	padding: 0;

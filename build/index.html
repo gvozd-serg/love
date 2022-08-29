@@ -8,7 +8,11 @@
     <title>Сборка Markup</title>
     <link rel="shortcut icon" href="assets/img/favicon.png" />
     <!--    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--	<link-->
+    <!--			rel="stylesheet"-->
+    <!--			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"-->
+    <!--	/>-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
     <!--	<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />-->
@@ -54,16 +58,16 @@
                         <a class="nav-link" href="#">For ladies</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav-link" href="#">About us</a>
+                        <a class="nav-link" href="../about.html">About us</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav-link"  href="#">Services</a>
+                        <a class="nav-link"  href="../services.html">Services</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav-link"  href="#">Blog</a>
+                        <a class="nav-link"  href="../blog.html">Blog</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav-link" href="#">Reviews</a>
+                        <a class="nav-link" href="../reviews.html">Reviews</a>
                     </li>
                     <li class="nav__item">
                         <a class="nav-link" href="#">Contacts</a>
@@ -125,8 +129,8 @@
         </section>
         <section class="helena section">
             <div class="container container_sm">
-                <div class="helena__img-holder animate__fadeInBottomLeft  animate__animated">
-                    <img src="assets/img/elena.jpeg" alt="image description">
+                <div class="helena__img-holder" data-aos="fade-up-right" data-aos-offset="-600">
+                    <img src="./assets/img/elena.jpeg" alt="image description">
                 </div>
                 <div class="helena__description">
                     <h2>helena</h2>
@@ -141,21 +145,21 @@
                     <div class="text-holder">
                         <strong>Founder, Owner and Matchmaker of Happy Family, an International Matchmaking agency.</strong>
                     </div>
-                    <a href="#" class="btn btn-secondary mx-3 my-2">Watch video</a>
+                    <a class="btn btn-secondary mx-3 my-2"  href="https://www.youtube.com/watch?v=LXb3EKWsInQ&ab_channel=Jacob%2BKatieSchwarz" data-fancybox="gallery" data-caption="Caption #2">Watch video</a>
                 </div>
             </div>
         </section>
-        <section class="ladies section">
+        <section class="ladies section" style="background-image: url('assets/img/ladies-bg.png')">
             <div class="container">
                 <div class="title-holder title-holder_sm">
-                    <h2 class="title">Ladies Public Profiles</h2>
+                    <h2 data-aos="fade-up" data-aos-offset="-900" class="title">Ladies Public Profiles</h2>
                     <strong class="pseudo-title">Confidentiality is our #1 priority.</strong>
                     <div class="text-holder">
                         <p>Because of client confidentiality, only registered users would have access to the full base of ladies. Unregistered clients can only see photos of ladies who have given their consent to publish their information on the public part of the site.</p>
                     </div>
                 </div>
                 <div class="ladies__slider-holder">
-                    <div class="ladies__visual"></div>
+                    <div class="ladies__visual" style="background-image: url('assets/img/ladies-decor.png')"></div>
                     <div class="swiper-container js-ladies-slider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -219,9 +223,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-button-next slick-arrow slick-arrow__next"><i class="icon-arrow"></i></div>
-                        <div class="swiper-button-prev slick-arrow slick-arrow__prev"><i class="icon-arrow"></i></div>
+                        <div class="swiper-button-next slick-arrow slick-arrow__next"><i class="icomoon-arrow"></i></div>
+                        <div class="swiper-button-prev slick-arrow slick-arrow__prev"><i class="icomoon-arrow"></i></div>
                     </div>
+                </div>
+                <div class="btn-holder">
+                    <div class="text-holder">
+                        <p>The whole huge database of our agency, as well as all-round professional matchmaker assistance is at the full disposal of authorized users.</p>
+                    </div>
+                    <a href="#" class="btn btn-primary">Registration</a>
                 </div>
             </div>
         </section>
@@ -234,7 +244,7 @@
                 </div>
             </div>
             <div class="guarantee__col-holder">
-                <div class="guarantee__col">
+                <div class="guarantee__col" data-aos="fade-right" data-aos-offset="-900">
                     <div class="guarantee__description-holder">
                         <div class="icon-holder">
                             <i class="icomoon-diamond"></i>
@@ -269,7 +279,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="guarantee__col">
+                <div class="guarantee__col" data-aos="fade-left" data-aos-offset="-900">
                     <div class="guarantee__description-holder">
                         <div class="icon-holder">
                             <i class="icomoon-love"></i>
@@ -310,7 +320,7 @@
                 <a href="#" class="btn btn-primary">About Agency</a>
             </div>
         </section>
-        <section class="more-happy section animate__backInUp animate__animated" style="background-image: url('assets/img/more-happy-bg.jpeg')">
+        <section class="more-happy section animate__backInUp animate__animated" style="background-image: url('assets/img/more-happy-bg.jpeg')" data-aos="fade-up" data-aos-offset="-700">
             <div class="container">
                 <div class="img-holder">
                     <img src="assets/img/more-happy-img.png" alt="image description">
@@ -320,12 +330,12 @@
                     <div class="text-holder">
                         <p>Let's get to know each other better, so we can begin our search for your soulmate among the many worthy candidates. Leave your request for a preliminary Zoom-meeting with Matchmaker Elena Kovalevskaya.</p>
                     </div>
-                    <a href="#" class="btn btn-primary">Schedule a Zoom meeting</a>
+                    <a href="#zoom" data-fancybox class="btn btn-primary">Schedule a Zoom meeting</a>
                     <div class="puzzle-holder"><img src="assets/img/puzzle.svg" alt="image description"></div>
                 </div>
             </div>
         </section>
-        <section class="our-happy section  animate__backInUp animate__animated">
+        <section class="our-happy section  animate__backInUp animate__animated" data-aos="fade-up" data-aos-offset="-700">
             <div class="container">
                 <div class="title-holder title-holder_sm">
                     <h2 class="title">Our Happy Couples' Reviews</h2>
@@ -403,7 +413,7 @@
                         <div class="img-holder">
                             <img src="assets/img/news-img.jpeg" alt="image description">
                         </div>
-                        <div class="happy-news__description animate__backInLeft animate__animated">
+                        <div class="happy-news__description animate__backInLeft animate__animated" data-aos="fade-left" data-aos-offset="-700">
                             <div class="text-holder">
                                 <p>Dating in Kharkov with foreigners - how easy it is to find love</p>
                             </div>
@@ -414,7 +424,7 @@
                         <div class="img-holder">
                             <img src="assets/img/news-img.jpeg" alt="image description">
                         </div>
-                        <div class="happy-news__description animate__backInLeft animate__animated">
+                        <div class="happy-news__description animate__backInLeft animate__animated" data-aos="fade-left" data-aos-offset="-700">
                             <div class="text-holder">
                                 <p>Dating in Kharkov with foreigners - how easy it is to find love</p>
                             </div>
@@ -425,7 +435,7 @@
                         <div class="img-holder">
                             <img src="assets/img/news-img.jpeg" alt="image description">
                         </div>
-                        <div class="happy-news__description animate__backInLeft animate__animated">
+                        <div class="happy-news__description animate__backInLeft animate__animated" data-aos="fade-left" data-aos-offset="-700">
                             <div class="text-holder">
                                 <p>Dating in Kharkov with foreigners - how easy it is to find love</p>
                             </div>
@@ -438,26 +448,29 @@
         </section>
         <section class="section description" style="background-image: url('assets/img/description-bg.png')">
             <div class="container">
-                <div class="text-holder" data-simplebar>
-                    <h2>Find your soul mate</h2>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
-                    <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                <div class="text-holder">
+                    <div class="scroll">
+                        <h2>Find your soul mate</h2>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+                        <p>We provide multi-level quality control on every stage of the matchmaking process. We don’t experience a problem of the workforce high «turnover». Our staff are true professionals, who receive special training and develop their competence day by day. As a result, 4 out of 5 men who retained our services find their happiness.</p>
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -497,9 +510,79 @@
             </div>
         </div>
     </footer>
+    <div class="hidden">
+        <div class="zoom" id="zoom">
+            <div class="form-holder">
+                <h2>Schedule a Zoom meeting</h2>
+                <div class="text-holder">
+                    <p>The Matchmaking process starts from your interview with Elena Kovalevskaya.
+                        Once you purchase your matchmaking plan, all further interviews with the matchmaker, as well as her support will be included. </p>
+                </div>
+                <form action="#" class="form">
+                    <div class="input-holder">
+                        <input type="text" class="input" placeholder="Your First Name">
+                    </div>
+                    <div class="input-holder">
+                        <input type="text" class="input" placeholder="Your Last Name">
+                    </div>
+                    <div class="input-holder">
+                        <input type="text" class="input" placeholder="Age">
+                    </div>
+                    <div class="input-holder">
+                        <input type="text" class="input" placeholder="Country">
+                    </div>
+                    <div class="input-holder">
+                        <input type="email" class="input" placeholder="E-mail">
+                    </div>
+                    <div class="input-holder">
+                        <input type="tel" class="input" placeholder="Phone number">
+                    </div>
+                    <div class="input-holder">
+                        <input type="text" class="input" placeholder="Profession ">
+                    </div>
+                    <div class="input-holder">
+                        <input type="text" class="input" placeholder="Time to call you back">
+                    </div>
+                    <div class="input-holder textarea-holder">
+                        <textarea class="input textarea" placeholder="Text message "></textarea>
+                    </div>
+                    <div class="checkbox-block">
+                        <h3>How did you hear about Happy Family Matchmaking Agency?</h3>
+                        <div class="input-holder">
+                            <input type="radio" id="friends" name="zoom-radio" value="friends">
+                            <label for="friends">From your friends or relatives</label>
+                        </div>
+                        <div class="input-holder">
+                            <input type="radio" id="web" name="zoom-radio" value="web">
+                            <label for="web">Found on the web</label>
+                        </div>
+                        <div class="input-holder">
+                            <input type="radio" id="clients" name="zoom-radio" value="clients">
+                            <label for="clients">From our clients</label>
+                        </div>
+                        <div class="input-holder">
+                            <input type="radio" id="social" name="zoom-radio" value="social">
+                            <label for="social">From social networks (FB, Instagram)</label>
+                        </div>
+                    </div>
+                    <div class="input-holder textarea-holder">
+                        <input id="personal-data" type="checkbox" name="personal-data" checked="checked">
+                        <label for="personal-data">
+                            You consent to the collection and processing of your personal data
+                        </label>
+                    </div>
+                    <h3>Request a free Interview service from your personal Happy Family Matchmaker now for having it scheduled within 24 - 48hours.</h3>
+                    <div class="btn-holder">
+                        <button type="submit" class="btn btn-secondary">Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!--		<script src="assets/js/bootstrap.bundle.min.js"></script>-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.1/swiper-bundle.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/simplebar.js"></script>

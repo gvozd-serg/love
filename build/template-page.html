@@ -8,7 +8,11 @@
     <title>Сборка Markup</title>
     <link rel="shortcut icon" href="assets/img/favicon.png" />
     <!--    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--	<link-->
+    <!--			rel="stylesheet"-->
+    <!--			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"-->
+    <!--	/>-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
     <!--	<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />-->
@@ -54,16 +58,16 @@
                         <a class="nav-link" href="#">For ladies</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav-link" href="#">About us</a>
+                        <a class="nav-link" href="../about.html">About us</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav-link"  href="#">Services</a>
+                        <a class="nav-link"  href="../services.html">Services</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav-link"  href="#">Blog</a>
+                        <a class="nav-link"  href="../blog.html">Blog</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav-link" href="#">Reviews</a>
+                        <a class="nav-link" href="../reviews.html">Reviews</a>
                     </li>
                     <li class="nav__item">
                         <a class="nav-link" href="#">Contacts</a>
@@ -148,9 +152,79 @@
             </div>
         </div>
     </footer>
+    <div class="hidden">
+        <div class="zoom" id="zoom">
+            <div class="form-holder">
+                <h2>Schedule a Zoom meeting</h2>
+                <div class="text-holder">
+                    <p>The Matchmaking process starts from your interview with Elena Kovalevskaya.
+                        Once you purchase your matchmaking plan, all further interviews with the matchmaker, as well as her support will be included. </p>
+                </div>
+                <form action="#" class="form">
+                    <div class="input-holder">
+                        <input type="text" class="input" placeholder="Your First Name">
+                    </div>
+                    <div class="input-holder">
+                        <input type="text" class="input" placeholder="Your Last Name">
+                    </div>
+                    <div class="input-holder">
+                        <input type="text" class="input" placeholder="Age">
+                    </div>
+                    <div class="input-holder">
+                        <input type="text" class="input" placeholder="Country">
+                    </div>
+                    <div class="input-holder">
+                        <input type="email" class="input" placeholder="E-mail">
+                    </div>
+                    <div class="input-holder">
+                        <input type="tel" class="input" placeholder="Phone number">
+                    </div>
+                    <div class="input-holder">
+                        <input type="text" class="input" placeholder="Profession ">
+                    </div>
+                    <div class="input-holder">
+                        <input type="text" class="input" placeholder="Time to call you back">
+                    </div>
+                    <div class="input-holder textarea-holder">
+                        <textarea class="input textarea" placeholder="Text message "></textarea>
+                    </div>
+                    <div class="checkbox-block">
+                        <h3>How did you hear about Happy Family Matchmaking Agency?</h3>
+                        <div class="input-holder">
+                            <input type="radio" id="friends" name="zoom-radio" value="friends">
+                            <label for="friends">From your friends or relatives</label>
+                        </div>
+                        <div class="input-holder">
+                            <input type="radio" id="web" name="zoom-radio" value="web">
+                            <label for="web">Found on the web</label>
+                        </div>
+                        <div class="input-holder">
+                            <input type="radio" id="clients" name="zoom-radio" value="clients">
+                            <label for="clients">From our clients</label>
+                        </div>
+                        <div class="input-holder">
+                            <input type="radio" id="social" name="zoom-radio" value="social">
+                            <label for="social">From social networks (FB, Instagram)</label>
+                        </div>
+                    </div>
+                    <div class="input-holder textarea-holder">
+                        <input id="personal-data" type="checkbox" name="personal-data" checked="checked">
+                        <label for="personal-data">
+                            You consent to the collection and processing of your personal data
+                        </label>
+                    </div>
+                    <h3>Request a free Interview service from your personal Happy Family Matchmaker now for having it scheduled within 24 - 48hours.</h3>
+                    <div class="btn-holder">
+                        <button type="submit" class="btn btn-secondary">Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!--		<script src="assets/js/bootstrap.bundle.min.js"></script>-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.1/swiper-bundle.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/simplebar.js"></script>
