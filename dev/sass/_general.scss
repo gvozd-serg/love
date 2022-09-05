@@ -405,6 +405,7 @@ input:checked+label {
   &:hover {
 	background-color: $bg-style-secondary;
 	border-color: $bg-style-secondary;
+	color: #fff;
   }
 }
 
@@ -435,7 +436,7 @@ input:checked+label {
 
 .btn-link {
   color: #212121;
-  background-color: transparent;
+  background-color: #fff;
 
   &:hover {
 	color: #fff;

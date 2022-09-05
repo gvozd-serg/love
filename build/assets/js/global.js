@@ -173,6 +173,7 @@ jQuery(document).ready(function($) {
 		nextArrow: '<div class="slick-arrow slick-arrow__next"><i class="icomoon-arrow"></i></div>',
 		vertical: true,
 		verticalSwiping: true,
+		dots: true,
 	});
 
 	let viewportWidth = $(window).width();

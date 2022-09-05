@@ -48,7 +48,7 @@
 	padding: 50px 0;
 
 	@include media('>=tablet') {
-	  padding: 130px 0 240px;
+	  padding: 130px 0 0px;
 	  display: flex;
 	  justify-content: space-between;
 	}

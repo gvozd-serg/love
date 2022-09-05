@@ -197,6 +197,7 @@
 	  z-index: 1;
 	  text-transform: uppercase;
 	  color: #fff;
+	  text-align: center;
 	}
   }
 
@@ -227,6 +228,7 @@
 
 .official-offer {
   position: relative;
+  border-bottom: 1px solid #fff;
 
   @include media('<tablet') {
 	padding-bottom: 450px;
@@ -275,7 +277,12 @@
 
 	@include media('>=tablet') {
 	  top: 0;
-	  bottom: auto;
+	}
+
+	img {
+	  @include media('>=tablet') {
+		height: 100%;
+	  }
 	}
   }
 
