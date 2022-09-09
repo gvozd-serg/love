@@ -88,6 +88,14 @@
 		font-size: 50px;
 		line-height: 64px;
 	  }
+
+	  & + .text-holder {
+		@include media('>=tablet') {
+		  font-weight: 500;
+		  font-size: 18px;
+		  line-height: 155%;
+		}
+	  }
 	}
   }
 
@@ -304,7 +312,7 @@
   overflow: hidden;
   background-repeat-y: no-repeat;
   background-size: contain;
-  background-position: 0 100%;
+  background-position: 0 960px;
 
   @include media('>=tablet') {
 	padding-bottom: 336px;
@@ -343,10 +351,14 @@
 
 	&:first-of-type {
 	  position: absolute;
-	  top: -218px;
+	  top: -240px;
 	  left: 50%;
 	  transform: translateX(-50%);
 	  z-index: 2;
+
+	  @include media('>=tablet') {
+		top: -218px;
+	  }
 
 	  span {
 		margin: 0;
@@ -355,10 +367,14 @@
 
 	&:last-of-type {
 	  position: absolute;
-	  bottom: -223px;
+	  bottom: 0;
 	  left: 50%;
 	  transform: translateX(-50%);
 	  z-index: 2;
+
+	  @include media('>=tablet') {
+		bottom: -223px;
+	  }
 	}
 
 	strong {
@@ -417,7 +433,11 @@
 
   .btn-holder {
 	position: relative;
-	bottom: -277px;
+	bottom: -30px;
+
+	@include media('>=tablet') {
+	  bottom: -277px;
+	}
 
 	.text-holder {
 	  p {
@@ -427,14 +447,44 @@
   }
 
   .slick-arrow {
-	top: 70%;
+	top: 50%;
+
+	@include media('<tablet') {
+	  width: 35px;
+	  height: 35px;
+	}
+
+	@include media('>=tablet') {
+	  top: 70%;
+	}
 
 	&__next {
-	  right: -35px;
+	  right: -17px;
+
+	  @include media('>=tablet') {
+		right: -35px;
+	  }
+
+	  i {
+		@include media('<tablet') {
+		  font-size: 34px;
+		  top: -8px;
+		}
+	  }
 	}
 
 	&__prev {
-	  left: -35px;
+	  left: -17px;
+
+	  @include media('>=tablet') {
+		left: -35px;
+	  }
+
+	  i {
+		@include media('<tablet') {
+		  font-size: 34px;
+		}
+	  }
 	}
   }
 
@@ -443,6 +493,28 @@
 
 	@include media('>=tablet') {
 	  padding: 0 40px;
+	}
+  }
+
+  .swiper-pagination.swiper-pagination-fraction {
+	position: absolute;
+	top: 135px;
+	right: 0;
+	left: auto;
+	bottom: auto;
+	width: auto;
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 164%;
+	color: #D9D9D9;
+	display: none;
+
+	@include media('>=tablet') {
+	  display: block;
+	}
+
+	.swiper-pagination-current {
+	  color: #212121;
 	}
   }
 }
@@ -532,9 +604,12 @@
 .changing.swiper-slide-active .img-wrap,
 .changed.swiper-slide-active .img-wrap {
   transform:scale(1.22);
+  position: relative;
+  top: -120px;
 
   @include media('>=tablet') {
 	transform:scale(1.99);
+	top: 0;
   }
 }
 
@@ -569,7 +644,6 @@
 
 	  @include media('>=tablet') {
 		padding: 60px 55px;
-		text-align: right !important;
 	  }
 
 	  &:after {
@@ -584,6 +658,13 @@
 
 		@include media('>=tablet') {
 		  display: block;
+		}
+	  }
+
+	  .text-holder,
+	  h3{
+		@include media('>=tablet') {
+		  text-align: right;
 		}
 	  }
 
@@ -604,6 +685,13 @@
 		padding: 60px 55px;
 		box-shadow: 0 8px 30px 3px rgba(18, 18, 18, 0.4);
 		margin-bottom: 0;
+	  }
+
+	  .text-holder,
+	  h3{
+		@include media('>=tablet') {
+		  text-align: left;
+		}
 	  }
 	}
   }
@@ -779,6 +867,23 @@
 	@include media('>=tablet') {
 	  margin: 0 0 60px;
 	}
+
+	.slick-arrow {
+	  &__prev {
+		@include media('<tablet') {
+		  top: -19px;
+		  left: auto;
+		  right: 90px;
+		}
+	  }
+
+	  &__next {
+		@include media('<tablet') {
+		  right: 22px;
+		  top: -19px;
+		}
+	  }
+	}
   }
 
   &__slide {
@@ -790,13 +895,14 @@
 	  background-color: #F7F6F8;
 	  background-position: 0 100%;
 	  background-repeat-y: no-repeat;
+	  justify-content: space-between;
 	  margin: 0;
 	  padding: 80px 20px;
 	  border-bottom: 5px solid $primary-color;
 
 	  @include media('>=tablet') {
 		padding: 120px 60px;
-		min-height: 606px;
+		min-height: 515px;
 	  }
 
 	  &:before {
@@ -808,9 +914,51 @@
 		top: 30px;
 		right: 30px;
 
+		@include media('<tablet') {
+		  width: 44px;
+		}
+
 		@include media('>=tablet') {
 		  top: 40px;
 		  right: 50px;
+		}
+	  }
+
+	  .quote-gallery-link {
+		display: block;
+		position: relative;
+		margin-bottom: 30px;
+	  }
+
+	  .quote-gallery {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		bottom: 22px;
+		right: 22px;
+		border-radius: 50%;
+		margin: 0;
+		background-color: #BF0F0D;
+		box-shadow: 0 4px 10px 4px rgba(164, 163, 163, 0.25);
+		width: 51px;
+		height: 51px;
+		padding: 14px 11px;
+	  }
+
+	  .img-holder {
+		position: relative;
+		
+	  }
+
+	  .text-holder {
+		position: relative;
+		max-height: 190px;
+		overflow: hidden;
+		transition: max-height ease-in-out 1s;
+
+		&.open {
+		  max-height: 100vh;
 		}
 	  }
 
@@ -825,6 +973,10 @@
 		  line-height: 172%;
 		  color: #B09762;
 		  text-decoration: none;
+		  margin: 0;
+		  background-color: transparent;
+		  border: none;
+		  cursor: pointer;
 		}
 
 		strong {
@@ -836,12 +988,22 @@
 
 	  p,
 	  a {
+		position: relative;
 		display: block;
 		margin: 0 0 30px;
 		font-size: 16px;
 
 		@include media('>=tablet') {
 		  margin: 0 0 60px;
+		}
+
+		i {
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  color: #fff;
+		  font-size: 50px;
 		}
 	  }
 	}
@@ -922,7 +1084,7 @@
 
 .watsup-link {
   position: relative;
-  display: block;
+  display: inline-block;
   padding-top: 50px;
   padding-left: 48px;
   margin-bottom: 30px;
@@ -943,7 +1105,7 @@
 
   i {
 	position: absolute;
-	top: 40px;
+	top: 48px;
 	left: 0;
   }
 }
@@ -1010,6 +1172,15 @@
 	  width: calc(100% - 990px);
 	  padding-right: 75px;
 	}
+
+	.img-holder {
+	  padding-top: 60px;
+	  display: none;
+
+	  @include media('>=tablet') {
+		display: block;
+	  }
+	}
   }
 
   .slick-arrow {
@@ -1041,15 +1212,6 @@
 	@include media('>=tablet') {
 	  text-align: left;
 	  padding-left: calc((100vw - 660px)/2);
-	}
-  }
-
-  .img-holder {
-	padding-top: 60px;
-	display: none;
-
-	@include media('>=tablet') {
-	  display: block;
 	}
   }
 }
@@ -1120,6 +1282,7 @@
 	  line-height: 170%;
 	  font-family: $font-primary;
 	  text-align: left;
+	  display: block;
 	}
 
 	h2 {
@@ -1324,6 +1487,13 @@
 
 	.our-happy__blockquote {
 	  background-color: #fff;
+	  height: auto;
+	}
+
+	.text-holder {
+	  p {
+		margin-bottom: 20px;
+	  }
 	}
   }
 }
@@ -1402,4 +1572,21 @@
 	display: block;
 	margin: 0 0 50px;
   }
+}
+
+.blink {
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1.0,2.0,0,1.0);
+  animation-duration: 1s;
+}
+
+@keyframes blinker {
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+
+@-webkit-keyframes blinker {
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
 }

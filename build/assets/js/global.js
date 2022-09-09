@@ -182,7 +182,7 @@ jQuery(document).ready(function($) {
 		$('.js-news-slider').slick('unslick');
 	}
 
-	var swiper = new Swiper(".js-ladies-slider", {
+	let swiper = new Swiper(".js-ladies-slider", {
 		slidesPerView: 'auto',
 		spaceBetween: 0,
 		centeredSlides: true,
@@ -191,6 +191,10 @@ jQuery(document).ready(function($) {
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			type: "fraction",
 		},
 		on: {
 			init: function () {
@@ -208,8 +212,8 @@ jQuery(document).ready(function($) {
 	});
 
 	const currentTime = () => {
-		const el = document.querySelector('.js-tracker');
-
+		const elements = document.querySelectorAll('.js-tracker');
+		// console.log(el);
 		let date = new Date();
 		let hh = date.getHours();
 		let mm = date.getMinutes();
@@ -218,13 +222,23 @@ jQuery(document).ready(function($) {
 		hh = hh < 10 ? `0${hh}` : hh;
 		mm = mm < 10 ? `0${mm}` : mm;
 
-		let time = `${hh}:${mm}`;
+		let time = `${hh}<span class="blink">:</span>${mm}`;
 
-		el.innerHTML = time;
+		for (let elem of elements) {
+			elem.innerHTML = time;
+		}
 	};
 
 	currentTime();
 	setInterval(currentTime, 1000);
+
+	const readMoreOpen = () => {
+		$('.js-more-open').on('click', function () {
+			$(this).closest('.our-happy__blockquote').children('.text-holder').toggleClass( "open");
+		})
+	}
+
+	readMoreOpen();
 
 	AOS.init({
 		duration: 1000,

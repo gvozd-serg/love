@@ -218,6 +218,7 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	font-size: 38px;
 
 	@include media('>=tablet') {
 	  justify-content: flex-start;
