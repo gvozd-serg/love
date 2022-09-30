@@ -1,0 +1,174 @@
+@@include('templates/head.html')
+@@include('templates/header-pc.html')
+<main class="wrapper dashboard-page">
+	<section class="dashboard">
+		<div class="container container_xl">
+			<div class="breadcrumbs">
+				<ul class="breadcrumbs__list">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">My personal account</a></li>
+					<li><span>Documents</span></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="gallery-section">
+		<div class="container container_xl">
+			<h1 class="dashboard-title">Documents</h1>
+			<div class="gallery-section__holder">
+				<div class="text-holder">
+					<p>Please rewiew these documents and check the “Signed” box if you agree.</p>
+				</div>
+				<div class="documents-block">
+					<div class="documents-title">
+						<strong>Privacy policy</strong>
+					</div>
+					<div class="read-holder">
+						<a href="#" class="btn btn-link">Read the document</a>
+						<div class="checkbox-holder">
+							<input id="signed-privacy" type="checkbox" name="privacy">
+							<label for="signed-privacy">
+								Signed
+							</label>
+							<span class="pseudo-bg"></span>
+						</div>
+					</div>
+				</div>
+				<div class="documents-block">
+					<div class="documents-title">
+						<strong>Terms and Conditions</strong>
+					</div>
+					<div class="read-holder">
+						<a href="#" class="btn btn-link">Read the document</a>
+						<div class="checkbox-holder">
+							<input id="signed-terms" type="checkbox" name="terms" >
+							<label for="signed-terms">
+								Signed
+							</label>
+							<span class="pseudo-bg"></span>
+						</div>
+					</div>
+				</div>
+				<div class="documents-block">
+					<div class="documents-title">
+						<strong>Refund policy</strong>
+					</div>
+					<div class="read-holder">
+						<a href="#" class="btn btn-link">Read the document</a>
+						<div class="checkbox-holder">
+							<input id="signed-refund" type="checkbox" name="refund">
+							<label for="signed-refund">
+								Signed
+							</label>
+							<span class="pseudo-bg"></span>
+						</div>
+					</div>
+				</div>
+				<div class="documents-block">
+					<div class="documents-title">
+						<strong>Agency agreenent</strong>
+						<div class="documents-text-holder">
+							<p>By signing of this agreement, the customer acknowledges and confirms that the customer understands and accepts the rules and conditions stipulated by Happy Family for the purpose of efficient service provisions here under.</p>
+						</div>
+					</div>
+					<div class="read-holder">
+						<a href="#" class="btn btn-link">Read the document</a>
+						<div class="checkbox-holder">
+							<input id="signed-agreenent" type="checkbox" name="agreenent">
+							<label for="signed-agreenent">
+								Signed
+							</label>
+							<span class="pseudo-bg"></span>
+						</div>
+					</div>
+				</div>
+				<div class="documents-block">
+					<div class="documents-title">
+						<strong>Supplementary agreement</strong>
+						<div class="documents-text-holder">
+							<p>The list of provided services and their price</p>
+						</div>
+					</div>
+					<div class="read-holder">
+						<a href="#" class="btn btn-link">Read the document</a>
+						<div class="checkbox-holder">
+							<input id="signed-supplementary" type="checkbox" name="supplementary">
+							<label for="signed-supplementary">
+								Signed
+							</label>
+							<span class="pseudo-bg"></span>
+						</div>
+					</div>
+				</div>
+				<div class="documents-block documents-block_not-check">
+					<div class="documents-title">
+						<strong>Background check</strong>
+						<div class="documents-text-holder">
+							<p>International Marriage Broker Regulation Act (IMBRA) Disclosure Form
+								Please download the PDF document, print it, fill it out and sign it. Scan/photograph the document after signing and upload photos of all pages.</p>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="gallery-section__block">
+									<label for="upload-photo" class="upload-photo">
+										<div class="icon-holder">
+											<i class="icomoon-photo"></i>
+										</div>
+										<span>Upload photos</span>
+									</label>
+									<input type="file" name="photo" id="upload-photo" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="read-holder">
+						<a href="#" class="btn btn-link">Download PDF document</a>
+					</div>
+				</div>
+				<div class="documents-block documents-block_not-check">
+					<div class="documents-title">
+						<strong>Passport copy</strong>
+						<div class="documents-text-holder">
+							<p>The series and number of the passport of a citizen (for verification, I will register the passport of a citizen of Ukraine for traveling abroad) or the series and number of the certificate of nationality (for verification, I will register the passport of a citizen at the sight of the card).</p>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="gallery-section__block">
+									<label for="upload-photo" class="upload-photo">
+										<div class="icon-holder">
+											<i class="icomoon-photo"></i>
+										</div>
+										<span>Upload photos</span>
+									</label>
+									<input type="file" name="photo" id="upload-photo" />
+								</div>
+							</div>
+							<div class="col">
+								<div class="gallery-section__block">
+									<div class="img-holder" style="background-image: url('./assets/img/pasport-img.svg')">
+										<a href="./assets/img/pasport-img.svg" data-fancybox="gallery" class="gallery-open">
+											<i class="icomoon-zoom-in"></i>
+										</a>
+										<button href="#" class="remove-img"><i class="icomoon-garbage"></i></button>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="gallery-section__block">
+									<div class="img-holder" style="background-image: url('./assets/img/pasport-img.svg')">
+										<a href="./assets/img/pasport-img.svg" data-fancybox="gallery" class="gallery-open">
+											<i class="icomoon-zoom-in"></i>
+										</a>
+										<button href="#" class="remove-img"><i class="icomoon-garbage"></i></button>
+									</div>
+									<strong class="img-title">Waiting for moderation</strong>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+@@include('templates/footer-dashboard.html')

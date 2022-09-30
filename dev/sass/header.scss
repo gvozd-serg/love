@@ -44,6 +44,11 @@
 	}
   }
 
+  &_pc {
+	border: 1px solid #D4D2D6;
+	background-color: #F5F5F5;
+  }
+
   .logo-holder {
 	width: 185px;
 
@@ -216,8 +221,10 @@
 }
 
 .nav-login {
+  position: relative;
   display: flex;
   margin-bottom: 40px;
+  align-items: center;
     //margin: auto 35px auto auto;
 
   @include media('>=1320px') {
@@ -333,5 +340,93 @@
   span {
 	top: 50%;
 	transform: translateY(-50%);
+  }
+}
+
+.login-opener {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 80px;
+
+  &.active {
+	i {
+	  transform: rotate(180deg) translateY(-50%);
+	  top: 34%;
+	}
+  }
+
+  .user-img {
+	overflow: hidden;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+  }
+
+  i {
+	position: absolute;
+	transition: all ease-in-out 0.3s;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	font-size: 8px;
+  }
+}
+
+.user-info-list {
+  position: absolute;
+  top: calc(100% + 13px);
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out 0.3s;
+  background-color: #1F232B;
+  width: 286px;
+  z-index: 10;
+
+  &.active {
+	opacity: 1;
+	visibility: visible;
+  }
+
+  li {
+	&.ladies-first-item {
+	  border-top: 1px solid #fff;
+	}
+
+	&.ladies-last-item {
+	  border-bottom: 1px solid #fff;
+	}
+
+	&:after {
+	  display: none;
+	}
+
+	a {
+	  display: block;
+	  padding: 16px 31px 15px 66px;
+	  position: relative;
+	  color: #fff;
+	  transition: background-color;
+	  text-align: left;
+	  font-weight: 500;
+	  font-size: 15px;
+	  line-height: 17px;
+
+	  &:hover {
+		background-color: #B09762;
+		color: #fff;
+	  }
+
+	  i {
+		position: absolute;
+		top: 50%;
+		left: 31px;
+		transform: translateY(-50%);
+		font-size: 17px;
+	  }
+	}
   }
 }

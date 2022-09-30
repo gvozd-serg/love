@@ -1,0 +1,71 @@
+@@include('templates/head.html')
+@@include('templates/header-pc.html')
+<main class="wrapper dashboard-page">
+	<section class="dashboard">
+		<div class="container container_xl container_df">
+			<div class="breadcrumbs">
+				<ul class="breadcrumbs__list">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">My personal account </a></li>
+					<li><span>Favorites</span></li>
+				</ul>
+			</div>
+			<ul class="ladies-btn-list">
+				<li>
+					<a href="#" class="btn"><i class="icomoon-ladies"></i>Ladies' gallery</a>
+				</li>
+				<li>
+					<a href="#" class="btn"><i class="icomoon-gifts"></i>Gifts and Flowers</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="gallery-section">
+		<div class="container container_xl">
+			<h1 class="dashboard-title">Favorites</h1>
+			<div class="gallery-section__holder">
+				<div class="favorites-heading">
+					<strong>My choice</strong>
+					<a href="#"><i class="icomoon-garbage"></i>Remove all profiles</a>
+				</div>
+				<div class="favorites-row">
+					<div class="ladies-block">
+						<div class="ladies-block__media">
+							<div class="img-holder">
+								<img src="./assets/img/ladies-img-2.jpeg" alt="image description">
+							</div>
+							<a href="#" class="btn">Profile page</a>
+							<a href="#" class="video-link"><i class="icomoon-camera"></i>Add for intro video date</a>
+						</div>
+						<div class="ladies-block__info">
+							<span class="ladies-block__id">ID 4567820</span>
+							<strong class="ladies-block__name">Anastasia</strong>
+							<ul class="ladies-block__info-list">
+								<li>
+									<span>Age:</span>
+									<strong>33</strong>
+								</li>
+								<li>
+									<span>Height (cm/ft-inch):</span>
+									<strong>170/4’-56*</strong>
+								</li>
+								<li>
+									<span>Weight (kg/lb):</span>
+									<strong>60/132</strong>
+								</li>
+								<li>
+									<span>Current location:</span>
+									<strong>Lissabon</strong>
+								</li>
+							</ul>
+							<div class="ladies-block__rating-holder">
+								<strong>My personal rating </strong>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+@@include('templates/footer-dashboard.html')

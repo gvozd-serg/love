@@ -384,6 +384,11 @@ input:checked+label {
 
   border-radius: 0;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+  &:disabled {
+	pointer-events: none;
+	opacity: 0.3;
+  }
 }
 
 .btn-primary {
@@ -680,8 +685,18 @@ input:checked+label {
 	max-width: 1340px;
   }
 
+  &_xl {
+	max-width: 1645px;
+  }
+
   &_lg {
 	max-width: 1640px;
+  }
+
+  &_df {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
   }
 }
 

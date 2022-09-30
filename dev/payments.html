@@ -1,0 +1,120 @@
+@@include('templates/head.html')
+@@include('templates/header-pc.html')
+<main class="wrapper dashboard-page">
+	<section class="dashboard">
+		<div class="container container_xl container_df">
+			<div class="breadcrumbs">
+				<ul class="breadcrumbs__list">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">My personal account </a></li>
+					<li><span>Payment</span></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="gallery-section">
+		<div class="container container_xl">
+			<h1 class="dashboard-title">Payments</h1>
+			<div class="gallery-section__holder">
+				<div class="text-holder">
+					<p>On this page you will find a payment plan for the selected package of services, as well as the history of all your payments made on our website</p>
+				</div>
+				<div class="service-plan-info" style="background-image: url('./assets/img/service-plan-bg.png')">
+					<div class="service-plan-block">
+						<strong>Service plan </strong>
+						<span class="price">$8000</span>
+						<span>Current plan - “Gold”</span>
+					</div>
+				</div>
+				<div class="service-plan-title">
+					<div class="service-plan-title__holder">
+						<span>Transactions name</span>
+						<span>Sum, USD</span>
+					</div>
+				</div>
+				<div class="documents-block documents-block_payment">
+					<div class="service-plan-title__holder service-plan-title__holder_pay">
+						<strong>Current plan - “Gold” - payment 1</strong>
+						<span>$2000</span>
+					</div>
+					<div class="payment-btn-holder active-pay">
+						<a href="#" class="btn">Pay</a>
+					</div>
+				</div>
+				<div class="documents-block documents-block_payment">
+					<div class="service-plan-title__holder service-plan-title__holder_pay">
+						<strong>Current plan - “Gold” - payment 2</strong>
+						<span>$1000</span>
+					</div>
+					<div class="payment-btn-holder active-pay">
+						<a href="#" class="btn">Pay</a>
+					</div>
+				</div>
+				<div class="documents-block documents-block_payment">
+					<div class="service-plan-title__holder service-plan-title__holder_pay">
+						<strong>Current plan - “Gold” - payment 3</strong>
+						<span>$2500</span>
+					</div>
+					<div class="payment-btn-holder">
+						<a href="#" class="btn">Pay</a>
+					</div>
+				</div>
+				<div class="documents-block documents-block_payment">
+					<div class="service-plan-title__holder service-plan-title__holder_pay">
+						<strong>Success fee</strong>
+						<span>$2500</span>
+					</div>
+					<div class="payment-btn-holder">
+						<a href="#" class="btn">Pay</a>
+					</div>
+				</div>
+				<h2 class="dashboard-title dashboard-title_top">Payments history</h2>
+				<div class="payments-history-holder">
+					<table>
+						<thead>
+							<tr>
+								<th>Data</th>
+								<th>Transactions name</th>
+								<th>Payment type</th>
+								<th>Sum, USD</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>28.06.2022</td>
+								<td>Current plan - “Gold” - payment 1</td>
+								<td>Service plan</td>
+								<td><strong class="price">$2000</strong></td>
+							</tr>
+							<tr>
+								<td>10.06.2022</td>
+								<td>Success fee in case of your marrige to one of your ladies</td>
+								<td>Success fee</td>
+								<td><strong class="price">$1000</strong></td>
+							</tr>
+							<tr>
+								<td>08.05.2022</td>
+								<td>Gift flowers 3</td>
+								<td>Gift</td>
+								<td><strong class="price">$2000</strong></td>
+							</tr>
+							<tr>
+								<td>10.04.2022</td>
+								<td>Success fee</td>
+								<td>Service plan</td>
+								<td><strong class="price">$2000</strong></td>
+							</tr>
+							<tr>
+								<td>26.03.2022</td>
+								<td>Extra service “Zoom call” with enterpreter</td>
+								<td>Extra service </td>
+								<td><strong class="price">$2000</strong></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+@@include('templates/footer-dashboard.html')

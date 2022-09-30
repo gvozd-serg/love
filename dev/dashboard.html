@@ -1,0 +1,304 @@
+@@include('templates/head.html')
+@@include('templates/header-pc.html')
+<main class="wrapper dashboard-page">
+	<section class="dashboard">
+		<div class="container">
+			<div class="breadcrumbs">
+				<ul class="breadcrumbs__list">
+					<li><a href="#">Home</a></li>
+					<li><span>My personal account</span></li>
+				</ul>
+			</div>
+			<div class="dashboard__title-holder">
+				<h1>Congratulations</h1>
+			</div>
+			<div class="dashboard__text-holder">
+				<p>You have successfully registered on the International Love Match site. Now you are only two steps
+					away from a new stage in your life.
+					Very soon we will start searching for your soul mate together.</p>
+				<p>We are very responsible in our selection of both girls and men. That is why in order to make our operation as effective as possible you have to fill in and send a questionnaire, as well as to schedule and pass an interview with a matchmaker.</p>
+			</div>
+			<div class="dashboard__form-holder">
+				<h2>FILL THE APPLICATION FORM</h2>
+				<div class="dashboard__steps-holder">
+					<div class="dashboard__step-block">
+						<div class="dashboard__step-heading">
+							<span class="dashboard__step-count">1</span>
+							<strong class="dashboard__step-title">Personal information</strong>
+							<i class="icomoon-chevron"></i>
+						</div>
+						<div class="dashboard__step">
+							<form action="#" class="dashboard__step-form">
+								<div class="input-holder">
+									<label class="input-label" for="first-name">First name</label>
+									<input id="first-name" type="text">
+								</div>
+								<div class="input-holder">
+									<label class="input-label" for="surname">Surname <i class="icomoon-privacy"><div class="privacy-text">Confidential field. Accessible only to the Matchmaker</div></i></label>
+									<input id="surname" type="text">
+								</div>
+								<div class="input-holder">
+									<label class="input-label" for="date-of-birth">Date of birth</label>
+									<input id="date-of-birth" type="text" class="date-picker" placeholder="mm/dd/yyyy ">
+									<i class="icomoon-calendar"></i>
+								</div>
+								<div class="input-holder">
+									<label class="input-label" for="city">City</label>
+									<input id="city" type="text" placeholder="Your city">
+								</div>
+								<div class="input-holder">
+									<label class="input-label" for="country">Country</label>
+									<input id="country" type="text" placeholder="Your country">
+								</div>
+								<div class="input-holder input-holder_address">
+									<label class="input-label" for="homeaddress">Homeaddress <i class="icomoon-privacy"><div class="privacy-text">Confidential field. Accessible only to the Matchmaker</div></i></label>
+									<input id="homeaddress" type="text">
+								</div>
+								<div class="input-holder input-holder_postcode">
+									<label class="input-label" for="postcode">Postcode <i class="icomoon-privacy"><div class="privacy-text">Confidential field. Accessible only to the Matchmaker</div></i></label>
+									<input id="postcode" type="text">
+								</div>
+								<div class="input-holder">
+									<label class="input-label" for="email">E-mail <i class="icomoon-privacy"><div class="privacy-text">Confidential field. Accessible only to the Matchmaker</div></i></label>
+									<input id="email" type="email">
+								</div>
+								<div class="input-holder">
+									<label class="input-label" for="phone">Mobile phone <i class="icomoon-privacy"><div class="privacy-text">Confidential field. Accessible only to the Matchmaker</div></i></label>
+									<div class="phone-holder">
+										<select name="number" id="number" class="custom-select number-select">
+											<option selected="selected">+3</option>
+											<option>+4</option>
+											<option>+5</option>
+											<option>+6</option>
+											<option>+8</option>
+											<option>+9</option>
+										</select>
+										<input id="phone" type="text" class="phone">
+									</div>
+								</div>
+								<div class="input-holder input-holder_socials">
+									<strong class="input-label">This phone matches the following social networks: <i class="icomoon-privacy"><div class="privacy-text">Confidential field. Accessible only to the Matchmaker</div></i></strong>
+									<ul class="input-socials">
+										<li>
+											<input id="viber" type="checkbox" name="viber" checked>
+											<label for="viber">
+												Viber
+											</label>
+										</li>
+										<li>
+											<input id="telegram" type="checkbox" name="telegram">
+											<label for="telegram">
+												Telegram
+											</label>
+										</li>
+										<li>
+											<input id="whatsapp" type="checkbox" name="whatsapp">
+											<label for="whatsapp">
+												WhatsApp
+											</label>
+										</li>
+										<li>
+											<input id="skype" type="checkbox" name="skype">
+											<label for="skype">
+												Skype
+											</label>
+										</li>
+										<li>
+											<input id="messanger" type="checkbox" name="messanger">
+											<label for="messanger">
+												Messanger
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="js-adding-socials adding-socials">
+									<div class="socials-holder">
+										<div class="input-holder">
+											<strong class="input-label">Your social networks <i class="icomoon-privacy"><div class="privacy-text">Confidential field. Accessible only to the Matchmaker</div></i></strong>
+											<div class="social-block">
+												<select name="social" class="custom-select social-select">
+													<option selected="selected">Choose</option>
+													<option>Facebook</option>
+													<option>Twitter</option>
+													<option>Instagram</option>
+												</select>
+											</div>
+										</div>
+										<div class="input-holder">
+											<input type="text" placeholder="Your nickname/login ">
+										</div>
+									</div>
+								</div>
+								<div class="add-socials-btn">
+									<span class="js-add-btn add-btn">+Add a row</span>
+								</div>
+								<div class="status-block">
+									<strong class="status-title">
+										Marital status
+									</strong>
+									<ul class="status-list">
+										<li>
+											<input type="radio" id="single" name="marital-status" value="single" checked>
+											<label for="single">Single</label>
+										</li>
+										<li>
+											<input type="radio" id="divorced" name="marital-status" value="divorced">
+											<label for="divorced">Divorced</label>
+										</li>
+										<li>
+											<input type="radio" id="widowed" name="marital-status" value="widowed">
+											<label for="widowed">Widowed</label>
+										</li>
+										<li>
+											<input type="radio" id="divorce-proceedings" name="marital-status" value="divorce-proceedings">
+											<label for="divorce-proceedings">Divorce proceedings</label>
+										</li>
+									</ul>
+									<div class="input-holder input-holder_status">
+										<label class="input-label" for="married">If you were married, then indicate how many years and the reason for the divorce</label>
+										<input id="married" type="text">
+									</div>
+								</div>
+								<div class="js-adding-children adding-socials">
+									<strong class="status-title">
+										Children
+									</strong>
+									<div class="status-block">
+										<div class="input-holder">
+											<label class="input-label" for="children-date-of-birth">Date of birth</label>
+											<input id="children-date-of-birth" type="text" class="date-picker" placeholder="mm/dd/yyyy ">
+											<i class="icomoon-calendar"></i>
+										</div>
+										<div class="input-holder input-holder_gender">
+											<strong class="input-label">Gender</strong>
+											<ul class="status-list">
+												<li>
+													<input type="radio" id="male" name="children-status" value="Male">
+													<label for="male">Male</label>
+												</li>
+												<li>
+													<input type="radio" id="female" name="children-status" value="Female">
+													<label for="female">Female</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="add-socials-btn">
+									<span class="js-add-child-btn add-btn">+Add a row</span>
+								</div>
+								<div class="status-block">
+									<strong class="status-title">
+										Children
+									</strong>
+									<div class="input-holder input-holder_socials">
+										<strong class="input-label">Do you want to have children?</strong>
+										<ul class="status-list status-list_none-margin">
+											<li>
+												<input type="radio" id="yes-children" name="children-status" value="yes">
+												<label for="yes-children">Yes</label>
+											</li>
+											<li>
+												<input type="radio" id="no-children" name="children-status" value="no">
+												<label for="no-children">No</label>
+											</li>
+											<li>
+												<input type="radio" id="undecided" name="children-status" value="Undecided">
+												<label for="undecided">Undecided</label>
+											</li>
+											<li>
+												<input type="radio" id="other-children" name="children-status" value="other">
+												<label for="other-children">
+													<input type="text" placeholder="Other" class="other-children-input">
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<strong class="status-title">
+									Race / Ethnicity
+								</strong>
+								<div class="status-block">
+									<div class="input-holder">
+										<input type="text">
+									</div>
+								</div>
+								<div class="status-block">
+									<strong class="status-title">
+										Religion
+									</strong>
+									<div class="religion-block">
+										<strong class="input-label">Did you grow up in a religious family?</strong>
+										<ul class="status-list status-list_none-margin">
+											<li>
+												<input type="radio" id="yes-religious-family" name="religious-family" value="yes">
+												<label for="yes-religious-family">Yes</label>
+											</li>
+											<li>
+												<input type="radio" id="no-religious-family" name="religious-family" value="no">
+												<label for="no-religious-family">No</label>
+											</li>
+										</ul>
+									</div>
+									<div class="religion-block">
+										<strong class="input-label">Are you ready to date a man with a different religion?</strong>
+										<ul class="status-list status-list_none-margin">
+											<li>
+												<input type="radio" id="yes-different-religion" name="different-religion" value="yes">
+												<label for="yes-different-religion">Yes</label>
+											</li>
+											<li>
+												<input type="radio" id="no-different-religion" name="different-religion" value="no">
+												<label for="no-different-religion">No</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="occupation">
+										Occupation
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="occupation" type="text">
+									</div>
+								</div>
+								<div class="status-block">
+									<strong class="status-title">
+										You live:
+									</strong>
+									<div class="input-holder input-holder_socials">
+										<ul class="status-list status-list_none-margin">
+											<li>
+												<input type="radio" id="yes-children" name="live-status" value="yes">
+												<label for="yes-children">Alone</label>
+											</li>
+											<li>
+												<input type="radio" id="no-children" name="live-status" value="no">
+												<label for="no-children">With children</label>
+											</li>
+											<li>
+												<input type="radio" id="undecided" name="live-status" value="Undecided">
+												<label for="undecided">Part-time with children</label>
+											</li>
+											<li>
+												<input type="radio" id="undecided" name="live-status" value="Undecided">
+												<label for="undecided">With parents</label>
+											</li>
+											<li>
+												<input type="radio" id="other-children" name="live-status" value="other">
+												<label for="other-children">
+													<input type="text" placeholder="Other" class="other-children-input">
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+@@include('templates/footer-dashboard.html')
