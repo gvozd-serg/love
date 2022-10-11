@@ -265,8 +265,9 @@ jQuery(document).ready(function($) {
 	}
 
 	const addSocial = () => {
-		const addBtn = document.querySelector('.js-add-btn');
+		const addBtn = document.querySelectorAll('.js-add-btn');
 		const addingBlocks = document.querySelector('.js-adding-socials');
+		const addingBlocksLang = document.querySelector('.js-adding-lang');
 		const addBlock = `
 				<div class="socials-holder">
 					<div class="input-holder">
@@ -283,13 +284,40 @@ jQuery(document).ready(function($) {
 					<div class="input-holder">
 						<input type="text" placeholder="Your nickname/login ">
 					</div>
-				</div>`
+				</div>`;
+		const addLangBlock = `
+				<div class="socials-holder">
+\t\t\t\t\t\t\t\t\t\t<div class="input-holder">
+\t\t\t\t\t\t\t\t\t\t\t<input type="text" class="input-required"  placeholder="Language">
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<div class="input-holder">
+\t\t\t\t\t\t\t\t\t\t\t<div class="social-block">
+\t\t\t\t\t\t\t\t\t\t\t\t<select name="lang-level" class="custom-select social-select">
+\t\t\t\t\t\t\t\t\t\t\t\t\t<option selected="selected">Level</option>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<option>Low</option>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<option>Basic</option>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<option>Medium</option>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<option>Good</option>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<option>Proficiency</option>
+\t\t\t\t\t\t\t\t\t\t\t\t</select>
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>`;
 
 		if (addBtn) {
-			addBtn.addEventListener('click', () => {
-				addingBlocks.insertAdjacentHTML('beforeend', addBlock);
-				customSelect();
-			})
+			for(let btn of addBtn) {
+				if (btn.classList.contains('js-add-lang')) {
+					btn.addEventListener('click', () => {
+						addingBlocksLang.insertAdjacentHTML('beforeend', addLangBlock);
+						customSelect();
+					})
+				} else {
+					btn.addEventListener('click', () => {
+						addingBlocks.insertAdjacentHTML('beforeend', addBlock);
+						customSelect();
+					})
+				}
+			}
 		}
 	}
 
@@ -372,8 +400,203 @@ jQuery(document).ready(function($) {
 				priceAll.text((priceAllNumb - priceNumb));
 			}
 		});
+	};
+
+	const ladiesFilter = () => {
+
+		if ($('.js-filter-opener')) {
+			$('.js-filter-opener').on('click', () => {
+				if ($('.js-filter-opener').hasClass('active')) {
+					$('.js-filter-opener').removeClass('active');
+					$('.js-filter').slideUp();
+				} else {
+					$('.js-filter-opener').addClass('active');
+					$('.js-filter').slideDown();
+				}
+			})
+		}
+	};
+
+	const openSelect = () => {
+		const selectOpeners = document.querySelectorAll('.filter-select-opener');
+		const selectsFilter = document.querySelectorAll('.js-select-filter');
+		const filterList = document.querySelector('.js-select-filters');
+		const removeAll = document.querySelector('.js-remove-all');
+		const addFavorites = document.querySelectorAll('.add-to-favorites');
+
+		if (selectOpeners.length > 0) {
+			for (let selectOpener of selectOpeners) {
+				selectOpener.addEventListener('click', (e) => {
+					const opener = e.target;
+					const list = opener.nextElementSibling;
+					list.classList.toggle("active");
+					document.addEventListener("click", function (e) {
+						const target = e.target;
+						const listTarget = target == list || list.contains(target);
+
+						if (!listTarget && target !== opener) {
+							list.classList.remove('active');
+						}
+					}, );
+				});
+			}
+
+			for (let selectFilter of selectsFilter) {
+				selectFilter.addEventListener('click', (e) => {
+					const selectText = e.target.innerText;
+					const checkFilter = e.target.previousElementSibling;
+					const filterTitle = e.target.closest('.input-holder').children[0].innerText;
+
+					if (!checkFilter.checked) {
+						filterList.insertAdjacentHTML('afterbegin', `<li id="${checkFilter.id}-check" data-id="${checkFilter.id}" class="choise-item"><span>${filterTitle}:</span> <span>${selectText}</span><span class="remove-choise"></span></li>`);
+
+						const removeChoise = document.querySelectorAll('.remove-choise');
+
+						if (removeChoise.length > 0) {
+							removeAll.classList.add('active');
+
+							for(let remove of removeChoise) {
+								remove.addEventListener('click', (e) => {
+									const item = e.target.closest('.choise-item');
+									const checkbox = document.getElementById(item.getAttribute('data-id'));
+
+									checkbox.checked = false;
+									item.remove();
+									if (removeChoise.length <= 1) {
+										removeAll.classList.remove('active');
+									}
+								})
+							}
+						}
+					} else {
+						document.querySelector(`#${checkFilter.id}-check`).remove();
+					}
+				});
+			}
+
+			removeAll.addEventListener('click', (e) => {
+				const items = document.querySelectorAll('.choise-item');
+				for (let item of items) {
+					const checkbox = document.getElementById(item.getAttribute('data-id'));
+
+					checkbox.checked = false;
+					item.remove();
+					removeAll.classList.remove('active');
+				}
+			})
+
+			for(let add of addFavorites) {
+				add.addEventListener('click', (e) => {
+					add.classList.toggle('active');
+				})
+			}
+		}
 	}
 
+	// $("#first-step").validate();
+
+	const steps = () => {
+		const stepsBtn = document.querySelectorAll('.js-step-btn');
+
+		for (let stepBtn of stepsBtn) {
+			stepBtn.addEventListener('click', (e) => {
+				// let event = e;
+				e.preventDefault();
+
+				const stepBlock = e.target.closest('.js-steps-block');
+				const nextStep = stepBlock.nextElementSibling;
+				const validArr = [];
+				let next = false;
+
+				// console.log(nextStep);
+
+
+				const stepsFormInputs = e.target.closest('.js-steps-form').querySelectorAll('.input-required');
+				// console.log(e.target.closest('.js-steps-form').querySelectorAll('input'));
+				// console.log(stepsFormInputs);
+				for (let el of stepsFormInputs) {
+
+					// debugger
+					if(el.type == 'text') {
+						if (el.value.length == 0) {
+
+							el.classList.add('error');
+						} else {
+							el.classList.remove('error');
+							el.setAttribute("data-valid", "valid");
+							validArr.push(el);
+						}
+
+						el.addEventListener('change', (e) => {
+							if (e.target.value) {
+								el.classList.remove('error');
+								el.setAttribute("data-valid", "valid");
+								validArr.push(el);
+							}
+						})
+					}
+				}
+
+				if (stepsFormInputs.length === validArr.length) {
+					nextStep.querySelector('.js-step').classList.add('active');
+					for (let el of stepsFormInputs) {
+						el.classList.add('disabled');
+					}
+				}
+				if (next) {
+				}
+
+				console.log(stepsFormInputs);
+
+				console.log(validArr);
+			});
+		}
+		// $('.js-step-btn').on('click', function () {
+		// 	$("#first-step").validate();
+		// })
+		// $(".js-steps-form").validate();
+	}
+
+	const convertWeight = () => {
+
+		// document.querySelector('.convert-weight').addEventListener('click', () => {
+		// 	let results = document.querySelector(".results");
+		// 	let weight = document.querySelector(".input-weight").value;
+		// 	let option = document.querySelector(".weight-select").value;
+		// 	let result;
+		// 	let unit;
+		//
+		// 	if (option === "pounds"){
+		// 		result = weight * 2.2;
+		// 		unit = " kg";
+		// 	} else if (option === "kg"){
+		// 		result = weight / 2.2;
+		// 		unit = " lbs";
+		// 	}
+		// 	console.log(weight);
+		// 	results.style.display = "block";
+		// 	results.innerHTML = result.toFixed(2) + unit;
+		// 	// results.innerHTML = result;
+		// });
+	};
+
+	const siblingsStatus = () => {
+		const siblingYes = document.getElementById('siblings-yes');
+		const siblingNo = document.getElementById('siblings-no');
+		const siblingStatus = document.querySelector('.sibling-status');
+
+		if(siblingYes) {
+			siblingYes.addEventListener('click', () => {
+				siblingStatus.classList.add('active');
+			});
+
+			siblingNo.addEventListener('click', () => {
+				siblingStatus.classList.remove('active');
+			});
+		}
+	}
+
+	siblingsStatus();
 	readMoreOpen();
 	currentTime();
 	setInterval(currentTime, 1000);
@@ -385,6 +608,10 @@ jQuery(document).ready(function($) {
 	addChildren();
 	selectGifts();
 	quantity();
+	ladiesFilter();
+	openSelect();
+	steps();
+	convertWeight();
 
 	AOS.init({
 		duration: 1000,

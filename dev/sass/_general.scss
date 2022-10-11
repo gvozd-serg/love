@@ -369,6 +369,7 @@ input:checked+label {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   min-width: 235px;
 
@@ -382,12 +383,19 @@ input:checked+label {
   border: 2px solid $secondary-color;
   line-height: 1.64;
 
+  background-color: #fff;
   border-radius: 0;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
   &:disabled {
 	pointer-events: none;
 	opacity: 0.3;
+  }
+
+  &:hover {
+	background-color: $secondary-color;
+	color: #fff;
+	border-color: $secondary-color;
   }
 }
 

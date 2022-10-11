@@ -21,46 +21,48 @@
 			<div class="dashboard__form-holder">
 				<h2>FILL THE APPLICATION FORM</h2>
 				<div class="dashboard__steps-holder">
-					<div class="dashboard__step-block">
+					<div class="dashboard__step-block js-steps-block">
 						<div class="dashboard__step-heading">
 							<span class="dashboard__step-count">1</span>
 							<strong class="dashboard__step-title">Personal information</strong>
 							<i class="icomoon-chevron"></i>
 						</div>
-						<div class="dashboard__step">
-							<form action="#" class="dashboard__step-form">
-								<div class="input-holder">
-									<label class="input-label" for="first-name">First name</label>
-									<input id="first-name" type="text">
-								</div>
-								<div class="input-holder">
-									<label class="input-label" for="surname">Surname <i class="icomoon-privacy"><div class="privacy-text">Confidential field. Accessible only to the Matchmaker</div></i></label>
-									<input id="surname" type="text">
-								</div>
-								<div class="input-holder">
-									<label class="input-label" for="date-of-birth">Date of birth</label>
-									<input id="date-of-birth" type="text" class="date-picker" placeholder="mm/dd/yyyy ">
-									<i class="icomoon-calendar"></i>
+						<div class="dashboard__step js-step active">
+							<form action="#" class="dashboard__step-form js-steps-form">
+								<div class="status-block status-block_fluid">
+									<div class="input-holder">
+										<label class="input-label" for="first-name">First name</label>
+										<input id="first-name" type="text" class="input-required">
+									</div>
+									<div class="input-holder">
+										<label class="input-label" for="surname">Surname <i class="icomoon-privacy"><div class="privacy-text">Confidential field. Accessible only to the Matchmaker</div></i></label>
+										<input id="surname" type="text" class="input-required" >
+									</div>
+									<div class="input-holder">
+										<label class="input-label" for="date-of-birth">Date of birth</label>
+										<input id="date-of-birth" type="text"  class="date-picker input-required" placeholder="mm/dd/yyyy ">
+										<i class="icomoon-calendar"></i>
+									</div>
 								</div>
 								<div class="input-holder">
 									<label class="input-label" for="city">City</label>
-									<input id="city" type="text" placeholder="Your city">
+									<input id="city" type="text" class="input-required"  placeholder="Your city">
 								</div>
 								<div class="input-holder">
 									<label class="input-label" for="country">Country</label>
-									<input id="country" type="text" placeholder="Your country">
+									<input id="country" type="text" class="input-required"  placeholder="Your country">
 								</div>
 								<div class="input-holder input-holder_address">
 									<label class="input-label" for="homeaddress">Homeaddress <i class="icomoon-privacy"><div class="privacy-text">Confidential field. Accessible only to the Matchmaker</div></i></label>
-									<input id="homeaddress" type="text">
+									<input id="homeaddress" type="text" class="input-required" >
 								</div>
 								<div class="input-holder input-holder_postcode">
 									<label class="input-label" for="postcode">Postcode <i class="icomoon-privacy"><div class="privacy-text">Confidential field. Accessible only to the Matchmaker</div></i></label>
-									<input id="postcode" type="text">
+									<input id="postcode" type="text" class="input-required" >
 								</div>
 								<div class="input-holder">
 									<label class="input-label" for="email">E-mail <i class="icomoon-privacy"><div class="privacy-text">Confidential field. Accessible only to the Matchmaker</div></i></label>
-									<input id="email" type="email">
+									<input id="email" type="email" >
 								</div>
 								<div class="input-holder">
 									<label class="input-label" for="phone">Mobile phone <i class="icomoon-privacy"><div class="privacy-text">Confidential field. Accessible only to the Matchmaker</div></i></label>
@@ -73,14 +75,14 @@
 											<option>+8</option>
 											<option>+9</option>
 										</select>
-										<input id="phone" type="text" class="phone">
+										<input id="phone" type="text" class="input-required phone">
 									</div>
 								</div>
 								<div class="input-holder input-holder_socials">
 									<strong class="input-label">This phone matches the following social networks: <i class="icomoon-privacy"><div class="privacy-text">Confidential field. Accessible only to the Matchmaker</div></i></strong>
 									<ul class="input-socials">
 										<li>
-											<input id="viber" type="checkbox" name="viber" checked>
+											<input id="viber" type="checkbox" name="viber" >
 											<label for="viber">
 												Viber
 											</label>
@@ -125,7 +127,7 @@
 											</div>
 										</div>
 										<div class="input-holder">
-											<input type="text" placeholder="Your nickname/login ">
+											<input type="text" class="input-required"  placeholder="Your nickname/login ">
 										</div>
 									</div>
 								</div>
@@ -138,7 +140,7 @@
 									</strong>
 									<ul class="status-list">
 										<li>
-											<input type="radio" id="single" name="marital-status" value="single" checked>
+											<input type="radio" id="single" name="marital-status" value="single" >
 											<label for="single">Single</label>
 										</li>
 										<li>
@@ -156,7 +158,7 @@
 									</ul>
 									<div class="input-holder input-holder_status">
 										<label class="input-label" for="married">If you were married, then indicate how many years and the reason for the divorce</label>
-										<input id="married" type="text">
+										<input id="married" type="text" class="input-required" >
 									</div>
 								</div>
 								<div class="js-adding-children adding-socials">
@@ -166,7 +168,7 @@
 									<div class="status-block">
 										<div class="input-holder">
 											<label class="input-label" for="children-date-of-birth">Date of birth</label>
-											<input id="children-date-of-birth" type="text" class="date-picker" placeholder="mm/dd/yyyy ">
+											<input id="children-date-of-birth" type="text" class="date-picker input-required" placeholder="mm/dd/yyyy ">
 											<i class="icomoon-calendar"></i>
 										</div>
 										<div class="input-holder input-holder_gender">
@@ -220,7 +222,7 @@
 								</strong>
 								<div class="status-block">
 									<div class="input-holder">
-										<input type="text">
+										<input type="text" class="input-required" >
 									</div>
 								</div>
 								<div class="status-block">
@@ -259,43 +261,824 @@
 										Occupation
 									</label>
 									<div class="input-holder input-holder_status">
-										<input id="occupation" type="text">
+										<input id="occupation" type="text" class="input-required" >
 									</div>
 								</div>
-								<div class="status-block">
+								<div class="status-block status-block_fluid">
 									<strong class="status-title">
 										You live:
 									</strong>
 									<div class="input-holder input-holder_socials">
 										<ul class="status-list status-list_none-margin">
 											<li>
-												<input type="radio" id="yes-children" name="live-status" value="yes">
-												<label for="yes-children">Alone</label>
+												<input type="radio" id="alone-live" name="live-status" value="alone-live">
+												<label for="alone-live">Alone</label>
 											</li>
 											<li>
-												<input type="radio" id="no-children" name="live-status" value="no">
-												<label for="no-children">With children</label>
+												<input type="radio" id="with-children-live" name="live-status" value="with-children-live">
+												<label for="with-children-live">With children</label>
 											</li>
 											<li>
-												<input type="radio" id="undecided" name="live-status" value="Undecided">
-												<label for="undecided">Part-time with children</label>
+												<input type="radio" id="with-children-live-part" name="live-status" value="with-children-live-part">
+												<label for="with-children-live-part">Part-time with children</label>
 											</li>
 											<li>
-												<input type="radio" id="undecided" name="live-status" value="Undecided">
-												<label for="undecided">With parents</label>
+												<input type="radio" id="with-parents-live" name="live-status" value="with-parents-live">
+												<label for="with-parents-live">With parents</label>
 											</li>
 											<li>
-												<input type="radio" id="other-children" name="live-status" value="other">
-												<label for="other-children">
+												<input type="radio" id="other-live" name="live-status" value="other">
+												<label for="other-live">
 													<input type="text" placeholder="Other" class="other-children-input">
 												</label>
 											</li>
 										</ul>
 									</div>
 								</div>
+								<div class="status-block">
+									<label class="status-title" for="law">
+										Do you have any problems with law?
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="law" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="steps-btn-holder">
+									<button class="btn js-step-btn">Next step</button>
+								</div>
 							</form>
 						</div>
 					</div>
+					<div class="dashboard__step-block js-steps-block">
+						<div class="dashboard__step-heading">
+							<span class="dashboard__step-count">2</span>
+							<strong class="dashboard__step-title">Physical description</strong>
+							<i class="icomoon-chevron"></i>
+						</div>
+						<div class="dashboard__step js-step">
+							<form action="#" class="dashboard__step-form js-steps-form">
+<!--								<div class="input-holder">-->
+<!--									<input class="input-weight" type="number"/>-->
+<!--									<select class="weight-select">-->
+<!--										<option>kg</option>-->
+<!--										<option>pounds</option>-->
+<!--									</select>-->
+<!--									<div class="convert-weight">Convert weight</div>-->
+<!--									<p class="results"></p>-->
+<!--								</div>-->
+
+
+<!--								<div class="input-holder">-->
+<!--									<label class="input-label" for="first-name">Height</label>-->
+<!--									<input id="first-name" type="text" class="input-required">-->
+<!--								</div>-->
+<!--								<div class="input-holder">-->
+<!--									<label class="input-label" for="first-name">First name</label>-->
+<!--									<input id="first-name" type="text" class="input-required">-->
+<!--								</div>-->
+								<div class="status-block status-block_fluid">
+									<strong class="status-title">
+										Eyes color:
+									</strong>
+									<div class="input-holder input-holder_socials">
+										<ul class="status-list status-list_none-margin">
+											<li>
+												<input type="radio" id="eyes-color-green" name="eyes-color" value="eyes-color-green">
+												<label for="eyes-color-green">Green</label>
+											</li>
+											<li>
+												<input type="radio" id="eyes-color-blue" name="eyes-color" value="eyes-color-blue">
+												<label for="eyes-color-blue">Blue</label>
+											</li>
+											<li>
+												<input type="radio" id="eyes-color-brown" name="eyes-color" value="eyes-color-brown">
+												<label for="eyes-color-brown">Brown</label>
+											</li>
+											<li>
+												<input type="radio" id="eyes-color-grey" name="eyes-color" value="eyes-color-grey">
+												<label for="eyes-color-grey">Grey</label>
+											</li>
+											<li>
+												<input type="radio" id="eyes-color-hazel" name="eyes-color" value="eyes-color-hazel">
+												<label for="eyes-color-hazel">Hazel</label>
+											</li>
+											<li>
+												<input type="radio" id="eyes-color-other" name="eyes-color" value="eyes-color-other">
+												<label for="eyes-color-other">
+													<input type="text" placeholder="Other" class="other-children-input">
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="status-block status-block_fluid">
+									<strong class="status-title">
+										Hair color:
+									</strong>
+									<div class="input-holder input-holder_socials">
+										<ul class="status-list status-list_none-margin">
+											<li>
+												<input type="radio" id="hair-color-blond" name="hair-color" value="hair-color-blond">
+												<label for="hair-color-blond">Blond</label>
+											</li>
+											<li>
+												<input type="radio" id="hair-color-black" name="hair-color" value="hair-color-black">
+												<label for="hair-color-black">Black</label>
+											</li>
+											<li>
+												<input type="radio" id="hair-color-brown" name="hair-color" value="hair-color-brown">
+												<label for="hair-color-brown">Brown</label>
+											</li>
+											<li>
+												<input type="radio" id="hair-color-light-brown" name="hair-color" value="hair-color-light-brown">
+												<label for="hair-color-light-brown">Light brown</label>
+											</li>
+											<li>
+												<input type="radio" id="hair-color-other" name="hair-color" value="hair-color-other">
+												<label for="hair-color-other">
+													<input type="text" placeholder="Other" class="other-children-input">
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="body-type">
+										Body type
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="body-type" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="ethnicity">
+										Ethnicity
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="ethnicity" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="tattoos">
+										The presence of tattoos, if so, which ones
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="tattoos" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="steps-btn-holder">
+									<div class="btn js-step-btn">Next step</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="dashboard__step-block js-steps-block">
+						<div class="dashboard__step-heading">
+							<span class="dashboard__step-count">3</span>
+							<strong class="dashboard__step-title">Additional description</strong>
+							<i class="icomoon-chevron"></i>
+						</div>
+						<div class="dashboard__step js-step">
+							<form action="#" class="dashboard__step-form js-steps-form">
+								<div class="status-block">
+									<label class="status-title" for="education">
+										Education
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="education" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title input-label" for="average-year">
+										Average income per year:
+										<i class="icomoon-privacy"><div class="privacy-text">Confidential field. Accessible only to the Matchmaker</div></i>
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="average-year" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title input-label" for="level-of-material">
+										Level of material well-being:
+										<i class="icomoon-privacy"><div class="privacy-text">Confidential field. Accessible only to the Matchmaker</div></i>
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="level-of-material" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="js-adding-lang adding-socials">
+									<label class="status-title input-label">
+										What foreign language(s) do you speak?
+									</label>
+									<div class="socials-holder">
+										<div class="input-holder">
+											<input type="text" class="input-required"  placeholder="Language">
+										</div>
+										<div class="input-holder">
+											<div class="social-block">
+												<select name="lang-level" class="custom-select social-select">
+													<option selected="selected">Level</option>
+													<option>Low</option>
+													<option>Basic</option>
+													<option>Medium</option>
+													<option>Good</option>
+													<option>Proficiency</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="add-socials-btn">
+									<span class="js-add-btn js-add-lang add-btn">+Add a row</span>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="apartment">
+										Do you live in a house or in an apartment?
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="apartment" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="clothes-style">
+										Style of clothes
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="clothes-style" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<strong class="status-title">
+										Astrological sign
+									</strong>
+									<ul class="astrological-list status-list">
+										<li>
+											<input id="zodiac-sign-aries" type="radio" name="zodiac-sign">
+											<label for="zodiac-sign-aries" class="astrological-label">Aries</label>
+										</li>
+										<li>
+											<input id="zodiac-sign-taurus" type="radio" name="zodiac-sign">
+											<label for="zodiac-sign-taurus" class="astrological-label">Taurus</label>
+										</li>
+										<li>
+											<input id="zodiac-sign-gemini" type="radio" name="zodiac-sign">
+											<label for="zodiac-sign-gemini" class="astrological-label">Gemini</label>
+										</li>
+										<li>
+											<input id="zodiac-sign-cancer" type="radio" name="zodiac-sign">
+											<label for="zodiac-sign-cancer" class="astrological-label">Cancer</label>
+										</li>
+										<li>
+											<input id="zodiac-sign-leo" type="radio" name="zodiac-sign">
+											<label for="zodiac-sign-leo" class="astrological-label">Leo</label>
+										</li>
+										<li>
+											<input id="zodiac-sign-virgo" type="radio" name="zodiac-sign">
+											<label for="zodiac-sign-virgo" class="astrological-label">Virgo</label>
+										</li>
+										<li>
+											<input id="zodiac-sign-libra" type="radio" name="zodiac-sign">
+											<label for="zodiac-sign-libra" class="astrological-label">Libra</label>
+										</li>
+										<li>
+											<input id="zodiac-sign-scorpio" type="radio" name="zodiac-sign">
+											<label for="zodiac-sign-scorpio" class="astrological-label">Scorpio</label>
+										</li>
+										<li>
+											<input id="zodiac-sign-sagittarius" type="radio" name="zodiac-sign">
+											<label for="zodiac-sign-sagittarius" class="astrological-label">Sagittarius</label>
+										</li>
+										<li>
+											<input id="zodiac-sign-capricorn" type="radio" name="zodiac-sign">
+											<label for="zodiac-sign-capricorn" class="astrological-label">Capricorn</label>
+										</li>
+										<li>
+											<input id="zodiac-sign-aquarius" type="radio" name="zodiac-sign">
+											<label for="zodiac-sign-aquarius" class="astrological-label">Aquarius</label>
+										</li>
+										<li>
+											<input id="zodiac-sign-pisces" type="radio" name="zodiac-sign">
+											<label for="zodiac-sign-pisces" class="astrological-label">Pisces</label>
+										</li>
+									</ul>
+								</div>
+								<div class="status-block">
+									<strong class="status-title">
+										Do you smoke?
+									</strong>
+									<ul class="status-list">
+										<li>
+											<input type="radio" id="smoke-yes" name="smoke-status">
+											<label for="smoke-yes">Yes</label>
+										</li>
+										<li>
+											<input type="radio" id="smoke-no" name="smoke-status">
+											<label for="smoke-no">No</label>
+										</li>
+									</ul>
+								</div>
+								<div class="status-block">
+									<strong class="status-title">
+										Do you drink alcohol?
+									</strong>
+									<ul class="status-list">
+										<li>
+											<input type="radio" id="alcohol-yes" name="alcohol-status">
+											<label for="alcohol-yes">Yes</label>
+										</li>
+										<li>
+											<input type="radio" id="alcohol-no" name="alcohol-status">
+											<label for="alcohol-no">No</label>
+										</li>
+										<li>
+											<input type="radio" id="alcohol-socially" name="alcohol-status">
+											<label for="alcohol-socially">socially</label>
+										</li>
+									</ul>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="health-issues">
+										Do you have any important health issues?
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="health-issues" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<div class="inout-holder">
+										<strong class="status-title">
+											Do you have siblings?
+										</strong>
+										<ul class="status-list">
+											<li>
+												<input type="radio" id="siblings-yes" name="siblings-status">
+												<label for="siblings-yes">Yes</label>
+											</li>
+											<li>
+												<input type="radio" id="siblings-no" name="siblings-status">
+												<label for="siblings-no">No</label>
+											</li>
+										</ul>
+									</div>
+									<div class="inout-holder sibling-status">
+										<strong class="status-title">
+											Are you close?
+										</strong>
+										<ul class="status-list">
+											<li>
+												<input type="radio" id="close-yes" name="siblings-close">
+												<label for="close-yes">Yes</label>
+											</li>
+											<li>
+												<input type="radio" id="close-no" name="siblings-close">
+												<label for="close-no">No</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="travelled">
+										Are you well-travelled? Places you want to visit
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="travelled" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="favorite-country">
+										Favorite country/ What did you like about it?
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="favorite-country" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="job">
+										Your job
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="job" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="achievements">
+										Your achievements in life:
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="achievements" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="character">
+										Your strongest character trait
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="character" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="values">
+										You values
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="values" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="what-is-love">
+										What is love for you (5 most important words)
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="what-is-love" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="marriage">
+										For you marriage is…
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="marriage" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="steps-btn-holder">
+									<div class="btn js-step-btn">Next step</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="dashboard__step-block js-steps-block">
+						<div class="dashboard__step-heading">
+							<span class="dashboard__step-count">4</span>
+							<strong class="dashboard__step-title">Your lifestyle</strong>
+							<i class="icomoon-chevron"></i>
+						</div>
+						<div class="dashboard__step js-step">
+							<form action="#" class="dashboard__step-form js-steps-form">
+								<div class="status-block">
+									<label class="status-title" for="hobbies">
+										Your hobbies, interests
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="hobbies" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="sports">
+										Favorite sports
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="sports" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="play-musical">
+										Do you play musical instruments?
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="play-musical" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="favorite-music">
+										Favorite music
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="favorite-music" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="favorite-book">
+										Favorite book
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="favorite-book" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="favorite-films">
+										Favorite films
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="favorite-films" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="favorite-cuisine">
+										Favorite cuisine, dishes.
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="favorite-cuisine" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="pets">
+										Do you have pets?
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="pets" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="leisure">
+										Leisure activities
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="leisure" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="steps-btn-holder">
+									<div class="btn js-step-btn">Next step</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="dashboard__step-block js-steps-block">
+						<div class="dashboard__step-heading">
+							<span class="dashboard__step-count">5</span>
+							<strong class="dashboard__step-title">Desired partner’s description</strong>
+							<i class="icomoon-chevron"></i>
+						</div>
+						<div class="dashboard__step js-step">
+							<form action="#" class="dashboard__step-form js-steps-form">
+								<div class="status-block">
+									<label class="status-title" for="lady-abroad">
+										Why are you looking for a lady abroad?
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="lady-abroad" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<div class="inout-holder">
+										<strong class="status-title">
+											Are you romantic?
+										</strong>
+										<ul class="status-list">
+											<li>
+												<input type="radio" id="romantic-yes" name="romantic-status">
+												<label for="romantic-yes">Yes</label>
+											</li>
+											<li>
+												<input type="radio" id="romantic-no" name="romantic-status">
+												<label for="romantic-no">No</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="status-block">
+									<strong class="status-title">Preferred age</strong>
+									<div class="input-holder">
+										<label class="input-label" for="age-from">From</label>
+										<input id="age-from" type="text" class="input-required">
+									</div>
+									<div class="input-holder">
+										<label class="input-label" for="age-to">To</label>
+										<input id="age-to" type="text" class="input-required" >
+									</div>
+									<div class="input-holder">
+										<label class="input-label" for="nationality">Nationality</label>
+										<input id="nationality" type="text" class="input-required" >
+									</div>
+									<div class="input-holder">
+										<label class="input-label" for="religion">Religion</label>
+										<input id="religion" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="style-of-clothes">
+										Style of clothes
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="style-of-clothes" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block">
+									<div class="input-holder">
+										<label class="input-label" for="religion">Height</label>
+										<div class="social-block">
+											<select name="height" class="custom-select social-select">
+												<option selected="selected">Choose</option>
+												<option>
+													Doesn’t matter
+												</option>
+												<option>
+													Blonde
+												</option>
+												<option>
+													Brunette
+												</option>
+												<option>
+													Fair-haired
+												</option>
+												<option>
+													Red-haired
+												</option>
+												<option>
+													Brown
+												</option>
+												<option>
+													Chestnut
+												</option>
+												<option>
+													Light-brown
+												</option>
+												<option>
+													Auburn
+												</option>
+												<option>
+													Black
+												</option>
+											</select>
+										</div>
+									</div>
+									<div class="input-holder">
+										<label class="input-label" for="religion">Body type</label>
+										<div class="social-block">
+											<select name="body-type" class="custom-select social-select">
+												<option selected="selected">Choose</option>
+												<option>
+													Slim
+												</option>
+												<option>
+													Athletic
+												</option>
+												<option>
+													Fit
+												</option>
+												<option>
+													Muscular
+												</option>
+												<option>
+													Curvy
+												</option>
+												<option>
+													Bit heavy
+												</option>
+												<option>
+													Overweight
+												</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="ready-to-date">
+										Are you ready to date a lady, who is taller than you?
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="ready-to-date" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="status-block status-block_fluid">
+									<strong class="status-title">
+										Eyes color:
+									</strong>
+									<div class="input-holder input-holder_socials">
+										<ul class="status-list status-list_none-margin">
+											<li>
+												<input type="radio" id="eyes-ladie-green" name="eyes-ladie" value="eyes-ladie-green">
+												<label for="eyes-ladie-green">Green</label>
+											</li>
+											<li>
+												<input type="radio" id="eyes-ladie-blue" name="eyes-ladie" value="eyes-ladie-blue">
+												<label for="eyes-ladie-blue">Blue</label>
+											</li>
+											<li>
+												<input type="radio" id="eyes-ladie-brown" name="eyes-ladie" value="eyes-ladie-brown">
+												<label for="eyes-ladie-brown">Brown</label>
+											</li>
+											<li>
+												<input type="radio" id="eyes-ladie-grey" name="eyes-ladie" value="eyes-ladie-grey">
+												<label for="eyes-ladie-grey">Grey</label>
+											</li>
+											<li>
+												<input type="radio" id="eyes-ladie-hazel" name="eyes-ladie" value="eyes-ladie-hazel">
+												<label for="eyes-ladie-hazel">Hazel</label>
+											</li>
+											<li>
+												<input type="radio" id="eyes-ladie-other" name="eyes-ladie" value="eyes-ladie-other">
+												<label for="eyes-ladie-other">
+													<input type="text" placeholder="Other" class="other-children-input">
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="status-block status-block_fluid">
+									<strong class="status-title">
+										Hair color:
+									</strong>
+									<div class="input-holder input-holder_socials">
+										<ul class="status-list status-list_none-margin">
+											<li>
+												<input type="radio" id="hair-ladie-blond" name="hair-ladie" value="hair-ladie-blond">
+												<label for="hair-ladie-blond">Blond</label>
+											</li>
+											<li>
+												<input type="radio" id="hair-ladie-black" name="hair-ladie" value="hair-ladie-black">
+												<label for="hair-ladie-black">Black</label>
+											</li>
+											<li>
+												<input type="radio" id="hair-ladie-brown" name="hair-ladie" value="hair-ladie-brown">
+												<label for="hair-ladie-brown">Brown</label>
+											</li>
+											<li>
+												<input type="radio" id="hair-ladie-light-brown" name="hair-ladie" value="hair-ladie-light-brown">
+												<label for="hair-ladie-light-brown">Light brown</label>
+											</li>
+											<li>
+												<input type="radio" id="hair-ladie-other" name="hair-ladie" value="hair-ladie-other">
+												<label for="hair-ladie-other">
+													<input type="text" placeholder="Other" class="other-children-input">
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="status-block">
+									<label class="status-title" for="appearance">
+										Appearance
+									</label>
+									<div class="input-holder input-holder_status">
+										<input id="appearance" type="text" class="input-required" >
+									</div>
+								</div>
+								<div class="steps-btn-holder">
+									<div class="btn js-step-btn">Next step</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dashboard-text-holder">
+				Please add from 5-15 your amateur or professional photos and videos. All your mediafiles will be moderated before being published on your public profile.
+			</div>
+			<h2 class="zoom-form-title">Schedule a Zoom meeting</h2>
+			<div class="form-holder">
+				<div class="form-block">
+					<div class="text-holder">
+						<p>The Matchmaking process starts from your interview with Elena Kovalevskaya.
+							Once you purchase your matchmaking plan, all further interviews with the matchmaker, as well as her support will be included. </p>
+					</div>
+					<form action="#" class="form">
+						<div class="input-holder">
+							<input type="text" class="input" placeholder="Your First Name">
+						</div>
+						<div class="input-holder">
+							<input type="text" class="input" placeholder="Your Last Name">
+						</div>
+						<div class="input-holder">
+							<input type="text" class="input" placeholder="Age">
+						</div>
+						<div class="input-holder">
+							<input type="text" class="input" placeholder="Country">
+						</div>
+						<div class="input-holder">
+							<input type="email" class="input" placeholder="E-mail">
+						</div>
+						<div class="input-holder">
+							<input type="tel" class="input" placeholder="Phone number">
+						</div>
+						<div class="input-holder">
+							<input type="text" class="input" placeholder="Profession ">
+						</div>
+						<div class="input-holder">
+							<input type="text" class="input" placeholder="Time to call you back">
+						</div>
+						<div class="input-holder textarea-holder">
+							<textarea class="input textarea" placeholder="Text message "></textarea>
+						</div>
+						<div class="checkbox-block">
+							<h3>How did you hear about Happy Family Matchmaking Agency?</h3>
+							<div class="input-holder">
+								<input type="radio" id="friends" name="zoom-radio" value="friends">
+								<label for="friends">From your friends or relatives</label>
+							</div>
+							<div class="input-holder">
+								<input type="radio" id="web" name="zoom-radio" value="web">
+								<label for="web">Found on the web</label>
+							</div>
+							<div class="input-holder">
+								<input type="radio" id="clients" name="zoom-radio" value="clients">
+								<label for="clients">From our clients</label>
+							</div>
+							<div class="input-holder">
+								<input type="radio" id="social" name="zoom-radio" value="social">
+								<label for="social">From social networks (FB, Instagram)</label>
+							</div>
+						</div>
+						<div class="input-holder textarea-holder">
+							<input id="personal-data" type="checkbox" name="personal-data" checked="checked">
+							<label for="personal-data">
+								You consent to the collection and processing of your personal data
+							</label>
+						</div>
+						<h3>Request a free Interview service from your personal Happy Family Matchmaker now for having it scheduled within 24 - 48hours.</h3>
+						<div class="btn-holder">
+							<button type="submit" class="btn btn-secondary">Order</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>

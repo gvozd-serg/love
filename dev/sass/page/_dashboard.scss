@@ -3,6 +3,7 @@
 }
 
 .dashboard {
+  margin: 0 0 14px;
 
   &__title-holder {
 	padding-top: 65px;
@@ -46,8 +47,17 @@
 	}
   }
 
+  &__step {
+	display: none;
+
+	&.active {
+	  display: block;
+	}
+  }
+
   &__step-block {
 	background-color: #fff;
+	margin: 0 0  15px;
   }
 
   &__step-heading {
@@ -148,6 +158,7 @@
 
 	  &_socials {
 		max-width: 100%;
+		width: auto;
 	  }
 
 	  &_status {
@@ -162,6 +173,25 @@
 
 		.status-list {
 		  margin-bottom: 0;
+		}
+	  }
+
+	  &_age {
+		display: flex;
+		flex-wrap: wrap;
+
+		label {
+		  width: 100%;
+		  display: block;
+		}
+
+		input {
+		  width: calc(50% - 6px) !important;
+		  margin-right: 6px;
+
+		  &:last-of-type {
+			margin-right: 0;
+		  }
 		}
 	  }
 
@@ -214,6 +244,24 @@
 		&.other-children-input {
 		  width: calc(100% - 50px);
 		}
+
+		&.error {
+		  border: 1px solid #C40401;
+		}
+
+		& + label.error {
+		  font-weight: 500;
+		  font-size: 10px;
+		  line-height: 28px;
+		  color: #C40401;
+		  position: absolute;
+		  bottom: -30px;
+		  left: 0;
+		}
+
+		&.disabled {
+		  pointer-events: none;
+		}
 	  }
 
 	  .ui-selectmenu-icon.ui-icon {
@@ -263,20 +311,20 @@
 		bottom: 12px;
 		right: 12px;
 		color: #9D9EA8;
+	  }
+	}
 
-		&.icomoon-privacy {
-		  display: inline-block;
-		  position: relative;
-		  cursor: pointer;
-		  color: #C40401;
-		  right: auto;
-		  bottom: auto;
+	i.icomoon-privacy {
+	  display: inline-block;
+	  position: relative;
+	  cursor: pointer;
+	  color: #C40401;
+	  right: auto;
+	  bottom: auto;
 
-		  &:hover .privacy-text {
-			opacity: 1;
-			visibility: visible;
-		  }
-		}
+	  &:hover .privacy-text {
+		opacity: 1;
+		visibility: visible;
 	  }
 	}
 
@@ -336,6 +384,18 @@
 	  max-width: 778px;
 	  display: flex;
 	  flex-wrap: wrap;
+
+	  &_fluid {
+		max-width: 100%;
+	  }
+	}
+
+	.steps-btn-holder {
+	  display: flex;
+	  width: 100%;
+	  justify-content: center;
+	  padding-top: 15px;
+	  padding-bottom: 75px;
 	}
 
 	.status-title {
@@ -357,6 +417,20 @@
 
 	  &_none-margin {
 		margin-bottom: 0;
+	  }
+
+	  &.astrological-list {
+		margin-bottom: 15px;
+		display: grid;
+		grid-template-columns: 1fr;
+
+		@include media('>=tablet') {
+		  grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+
+		li {
+		  margin-bottom: 35px;
+		}
 	  }
 
 	  li {
@@ -400,11 +474,54 @@
 		}
 	  }
 	}
+
+	.sibling-status {
+	  display: none;
+
+	  &.active {
+		display: block;
+	  }
+	}
   }
 
   .breadcrumbs {
 	background-color: transparent;
 	padding-top: 35px;
+  }
+
+  .dashboard-text-holder {
+	padding: 120px 0 100px;
+	margin: 0 auto;
+	max-width: 992px;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 150%;
+	color: #212121;
+	text-align: center;
+  }
+
+  .zoom-form-title {
+	margin: 0 0 50px;
+  }
+
+  .form-holder {
+	background-color: #AE9664;
+
+	.text-holder {
+	  font-family: $font-secondary;
+	  text-align: center;
+	  font-weight: 600;
+	  font-size: 20px;
+	  line-height: 32px;
+	  color: #FFFFFF;
+	  margin: 0 0 50px;
+	}
+
+	.form-block {
+	  max-width: 944px;
+	  margin: 0 auto;
+	  padding: 70px 0 100px;
+	}
   }
 }
 
@@ -414,7 +531,7 @@
 
   .ui-menu-item {
 	padding:0;
-	text-align: center;
+	//text-align: center;
 
 	&:before {
 	  display: none;
