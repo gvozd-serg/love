@@ -195,6 +195,14 @@
 		}
 	  }
 
+	  .your-answer {
+		display: none;
+
+		&.active {
+		  display: block;
+		}
+	  }
+
 	  .phone-holder {
 		display: flex;
 
@@ -433,6 +441,10 @@
 		}
 	  }
 
+	  .input-holder {
+		margin: 0;
+	  }
+
 	  li {
 		padding: 0;
 		margin-right: 50px;
@@ -528,6 +540,7 @@
 .ui-menu {
   list-style: none;
   background-color: #21242B;
+  max-width: 778px;
 
   .ui-menu-item {
 	padding:0;
@@ -546,6 +559,71 @@
 	  &.ui-state-active {
 		background-color: #B09762;
 		border-color: #21242B;
+	  }
+	}
+  }
+}
+
+.next-step-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1200px;
+  background: #1F232B;
+  box-shadow: 0 0 20px 6px rgba(91, 91, 91, 0.25);
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 475px;
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+	opacity: 1;
+	visibility: visible;
+  }
+
+  .modal-btn-list {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+
+	li {
+	  margin: 0;
+	  padding: 25px;
+
+	  &:before {
+		display: none;
+	  }
+	}
+  }
+
+  strong {
+	font-family: $font-secondary;
+	display: block;
+	margin: 0 0 35px;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 32px;
+	text-transform: uppercase;
+  }
+
+  .btn {
+	font-family: $font-primary;
+	color: #fff;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 164%;
+
+	&:not(.btn-primary) {
+	  background-color: transparent;
+
+	  &:hover {
+		background-color: #B09762;
 	  }
 	}
   }

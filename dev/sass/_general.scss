@@ -755,6 +755,11 @@ input:checked+label {
 
 	  span {
 		color: #838383;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		max-width: 140px;
+		display: inline-block;
 	  }
 
 	  &:last-of-type {
@@ -774,7 +779,7 @@ input:checked+label {
 		transform: rotate(-45deg);
 		width: 4px;
 		height: 4px;
-		top: 45%;
+		top: 11px;
 		right: 9px;
 	  }
 	}

@@ -23,6 +23,10 @@
 	z-index: 1;
 	max-width: 944px;
 	margin: 0 auto;
+
+	.form {
+	  color: #fff;
+	}
   }
 
   .input {
@@ -70,21 +74,24 @@
 .row-tel {
   background-color: #B09762;
   padding: 50px 0;
+  margin: 0 -20px;
 
   @include media('>=tablet') {
 	padding: 60px 0;
+	margin: 0;
 	display: flex;
 	flex-wrap: wrap;
   }
 
   .col {
 	position: relative;
-	padding: 0 20px;
+	padding: 0 20px 40px;
 	display: flex;
 	justify-content: center;
 
 	@include media('>=tablet') {
 	  width: 50%;
+	  padding-bottom: 0;
 	}
 
 	&:first-of-type {
@@ -210,18 +217,25 @@
 	  font-size: 24px;
 	  line-height: 170%;
 	  color: #212121;
+
+	  @include media('<768px') {
+		text-align: center;
+	  }
 	}
   }
 
   .contact-socials {
-	padding-top: 61px;
+	padding-top: 30px;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	font-size: 38px;
+	margin: 0 0 30px;
 
 	@include media('>=tablet') {
+	  padding-top: 61px;
 	  justify-content: flex-start;
+	  margin: 0;
 	}
 
 	li {

@@ -1,4 +1,5 @@
 .about-hero {
+  padding-top: 40px;
   background-color: #F5F5F5;
 
   &__focuses-holder {
@@ -290,11 +291,19 @@
 	  top: 105px;
 
 	  &__next {
-		right: -19px;
+		right: 9px;
+
+		@include media('>=tablet') {
+		  right: -19px;
+		}
 	  }
 
 	  &__prev {
-		left: -19px;
+		left: 9px;
+
+		@include media('>=tablet') {
+		  left: -19px;
+		}
 	  }
 	}
   }

@@ -231,7 +231,15 @@ jQuery(document).ready(function($) {
 
 	const readMoreOpen = () => {
 		$('.js-more-open').on('click', function () {
-			$(this).closest('.our-happy__blockquote').children('.text-holder').toggleClass( "open");
+			// $(this).closest('.our-happy__blockquote').children('.text-holder').toggleClass( "open");
+			// $(this).text('Read less');
+			if ($(this).closest('.our-happy__blockquote').children('.text-holder').hasClass( "open")) {
+				$(this).closest('.our-happy__blockquote').children('.text-holder').removeClass( "open")
+				$(this).text('Read more');
+			} else {
+				$(this).closest('.our-happy__blockquote').children('.text-holder').addClass( "open")
+				$(this).text('Read more');
+			}
 		})
 	}
 
@@ -262,12 +270,18 @@ jQuery(document).ready(function($) {
 
 	const customSelect = () => {
 		$( ".custom-select" ).selectmenu();
+		$( ".custom-select" ).on( "selectmenuselect", function( event, ui ) {
+			if (ui.item.value == 'answer') {
+				$('.js-your-answer').addClass('active');
+			}
+		} );
 	}
 
 	const addSocial = () => {
 		const addBtn = document.querySelectorAll('.js-add-btn');
 		const addingBlocks = document.querySelector('.js-adding-socials');
 		const addingBlocksLang = document.querySelector('.js-adding-lang');
+		const addingSpokenLang = document.querySelector('.js-adding-spoken');
 		const addBlock = `
 				<div class="socials-holder">
 					<div class="input-holder">
@@ -304,6 +318,14 @@ jQuery(document).ready(function($) {
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>`;
 
+		const addLangSpok = `
+			<div class="socials-holder">
+\t\t\t\t\t\t\t\t\t\t<div class="input-holder">
+\t\t\t\t\t\t\t\t\t\t\t<input type="text" class="input-required">
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+		`
+
 		if (addBtn) {
 			for(let btn of addBtn) {
 				if (btn.classList.contains('js-add-lang')) {
@@ -311,10 +333,14 @@ jQuery(document).ready(function($) {
 						addingBlocksLang.insertAdjacentHTML('beforeend', addLangBlock);
 						customSelect();
 					})
-				} else {
+				} else if (btn.classList.contains('js-add-socails')){
 					btn.addEventListener('click', () => {
 						addingBlocks.insertAdjacentHTML('beforeend', addBlock);
 						customSelect();
+					})
+				} else {
+					btn.addEventListener('click', () => {
+						addingSpokenLang.insertAdjacentHTML('beforeend', addLangSpok);
 					})
 				}
 			}
@@ -497,6 +523,7 @@ jQuery(document).ready(function($) {
 
 	const steps = () => {
 		const stepsBtn = document.querySelectorAll('.js-step-btn');
+		const stepsModal = document.getElementById('js-modal-step')
 
 		for (let stepBtn of stepsBtn) {
 			stepBtn.addEventListener('click', (e) => {
@@ -508,47 +535,45 @@ jQuery(document).ready(function($) {
 				const validArr = [];
 				let next = false;
 
-				// console.log(nextStep);
-
-
 				const stepsFormInputs = e.target.closest('.js-steps-form').querySelectorAll('.input-required');
-				// console.log(e.target.closest('.js-steps-form').querySelectorAll('input'));
-				// console.log(stepsFormInputs);
-				for (let el of stepsFormInputs) {
 
-					// debugger
-					if(el.type == 'text') {
-						if (el.value.length == 0) {
-
-							el.classList.add('error');
-						} else {
-							el.classList.remove('error');
-							el.setAttribute("data-valid", "valid");
-							validArr.push(el);
-						}
-
-						el.addEventListener('change', (e) => {
-							if (e.target.value) {
-								el.classList.remove('error');
-								el.setAttribute("data-valid", "valid");
-								validArr.push(el);
-							}
-						})
-					}
-				}
+				// for (let el of stepsFormInputs) {
+				// 	if(el.type == 'text') {
+				// 		if (el.value.length == 0) {
+				//
+				// 			el.classList.add('error');
+				// 		} else {
+				// 			el.classList.remove('error');
+				// 			el.setAttribute("data-valid", "valid");
+				// 			validArr.push(el);
+				// 		}
+				//
+				// 		el.addEventListener('change', (e) => {
+				// 			if (e.target.value) {
+				// 				el.classList.remove('error');
+				// 				el.setAttribute("data-valid", "valid");
+				// 				validArr.push(el);
+				// 			}
+				// 		})
+				// 	}
+				// }
 
 				if (stepsFormInputs.length === validArr.length) {
-					nextStep.querySelector('.js-step').classList.add('active');
-					for (let el of stepsFormInputs) {
-						el.classList.add('disabled');
-					}
+					stepsModal.classList.add('active');
+					document.querySelector('.js-modal-yes').addEventListener('click', () => {
+						nextStep.querySelector('.js-step').classList.add('active');
+						for (let el of stepsFormInputs) {
+							el.classList.add('disabled');
+						}
+						stepsModal.classList.remove('active');
+					});
+					document.querySelector('.js-modal-no').addEventListener('click', () => {
+
+						stepsModal.classList.remove('active');
+					});
 				}
 				if (next) {
 				}
-
-				console.log(stepsFormInputs);
-
-				console.log(validArr);
 			});
 		}
 		// $('.js-step-btn').on('click', function () {
