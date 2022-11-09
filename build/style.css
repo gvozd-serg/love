@@ -4899,6 +4899,85 @@ $screen-large 1280px
   width: 100%;
   overflow-x: auto;
   margin-bottom: 40px; }
+  .extra-services-block.services-plan table .plans-cost td {
+    color: #fff;
+    background-color: #21242B; }
+    .extra-services-block.services-plan table .plans-cost td:not(:first-of-type) {
+      font-family: "lora"; }
+  .extra-services-block.services-plan table .choose-plan td {
+    background-color: transparent;
+    padding: 0 !important; }
+    .extra-services-block.services-plan table .choose-plan td .choose-btn {
+      border: 1px solid #B09762;
+      display: block;
+      outline: none;
+      width: 100%;
+      height: 70px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 150%;
+      background-color: transparent;
+      cursor: pointer;
+      transition: all ease-in-out 0.4s; }
+      .extra-services-block.services-plan table .choose-plan td .choose-btn.active, .extra-services-block.services-plan table .choose-plan td .choose-btn:hover {
+        background-color: #B09762;
+        color: #fff; }
+  .extra-services-block.services-plan table th:not(:first-of-type),
+  .extra-services-block.services-plan table td:not(:first-of-type) {
+    white-space: normal;
+    text-align: center;
+    width: 130px;
+    padding: 10px;
+    position: relative;
+    border-left: 5px solid #fff;
+    position: relative; }
+    .extra-services-block.services-plan table th:not(:first-of-type):before,
+    .extra-services-block.services-plan table td:not(:first-of-type):before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: -11px;
+      left: 0;
+      right: 0;
+      border-left: 1px solid #B09762;
+      border-right: 1px solid #B09762;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity ease-in-out 0.4s; }
+    .extra-services-block.services-plan table th:not(:first-of-type).active:before, .extra-services-block.services-plan table th:not(:first-of-type).hover:before,
+    .extra-services-block.services-plan table td:not(:first-of-type).active:before,
+    .extra-services-block.services-plan table td:not(:first-of-type).hover:before {
+      opacity: 1;
+      visibility: visible; }
+    .extra-services-block.services-plan table th:not(:first-of-type) span,
+    .extra-services-block.services-plan table td:not(:first-of-type) span {
+      position: absolute;
+      display: block;
+      height: 1px;
+      width: 16px;
+      background-color: #000;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0;
+      line-height: 0; }
+      .extra-services-block.services-plan table th:not(:first-of-type) span.check,
+      .extra-services-block.services-plan table td:not(:first-of-type) span.check {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #B09762; }
+        .extra-services-block.services-plan table th:not(:first-of-type) span.check:before,
+        .extra-services-block.services-plan table td:not(:first-of-type) span.check:before {
+          content: '';
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+          width: 9px;
+          height: 5px;
+          border-left: 1px solid #fff;
+          border-bottom: 1px solid #fff; }
   .extra-services-block table {
     width: 1520px;
     border-collapse: collapse; }
@@ -4953,6 +5032,16 @@ $screen-large 1280px
       -webkit-appearance: none;
       margin: 0;
       /* <-- Apparently some margin are still there even though it's hidden */ }
+
+.services-plans-text {
+  display: block;
+  text-align: center;
+  font-family: "lora";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  color: #C40401;
+  margin: 0 0 50px; }
 
 .favorites-heading {
   padding-bottom: 40px;

@@ -621,6 +621,122 @@ jQuery(document).ready(function($) {
 		}
 	}
 
+	const choosePlan = () => {
+		const chooseBtns = document.querySelectorAll('.js-choose-btn');
+		const plansSilver = document.querySelectorAll('.silver');
+		const plansGold = document.querySelectorAll('.gold');
+		const plansPremium = document.querySelectorAll('.premium');
+		const plansVip = document.querySelectorAll('.vip');
+		const plansVipPlus = document.querySelectorAll('.vip-plus');
+		const plansCountry = document.querySelectorAll('.country-of-man');
+
+		for(let btn of chooseBtns) {
+			if (btn.classList.contains('silver-btn')) {
+				btn.addEventListener('mouseenter', () => {
+					for (let plan of plansSilver) {
+						plan.classList.add('hover');
+					}
+				});
+				btn.addEventListener('mouseleave', () => {
+					for (let plan of plansSilver) {
+						plan.classList.remove('hover');
+					}
+				});
+				btn.addEventListener('click', () => {
+					btn.classList.toggle('active');
+					for (let plan of plansSilver) {
+						plan.classList.toggle('active');
+					}
+				});
+			} else if(btn.classList.contains('gold-btn')) {
+				btn.addEventListener('mouseenter', () => {
+					for (let plan of plansGold) {
+						plan.classList.add('hover');
+					}
+				});
+				btn.addEventListener('mouseleave', () => {
+					for (let plan of plansGold) {
+						plan.classList.remove('hover');
+					}
+				});
+				btn.addEventListener('click', () => {
+					btn.classList.toggle('active');
+					for (let plan of plansGold) {
+						plan.classList.toggle('active');
+					}
+				});
+			} else if(btn.classList.contains('premium-btn')) {
+				btn.addEventListener('mouseenter', () => {
+					for (let plan of plansPremium) {
+						plan.classList.add('hover');
+					}
+				});
+				btn.addEventListener('mouseleave', () => {
+					for (let plan of plansPremium) {
+						plan.classList.remove('hover');
+					}
+				});
+				btn.addEventListener('click', () => {
+					btn.classList.toggle('active');
+					for (let plan of plansPremium) {
+						plan.classList.toggle('active');
+					}
+				});
+			} else if(btn.classList.contains('vip-btn')) {
+				btn.addEventListener('mouseenter', () => {
+					for (let plan of plansVip) {
+						plan.classList.add('hover');
+					}
+				});
+				btn.addEventListener('mouseleave', () => {
+					for (let plan of plansVip) {
+						plan.classList.remove('hover');
+					}
+				});
+				btn.addEventListener('click', () => {
+					btn.classList.toggle('active');
+					for (let plan of plansVip) {
+						plan.classList.toggle('active');
+					}
+				});
+			} else if(btn.classList.contains('vip-plus-btn')) {
+				btn.addEventListener('mouseenter', () => {
+					for (let plan of plansVipPlus) {
+						plan.classList.add('hover');
+					}
+				});
+				btn.addEventListener('mouseleave', () => {
+					for (let plan of plansVipPlus) {
+						plan.classList.remove('hover');
+					}
+				});
+				btn.addEventListener('click', () => {
+					btn.classList.toggle('active');
+					for (let plan of plansVipPlus) {
+						plan.classList.toggle('active');
+					}
+				});
+			} else if(btn.classList.contains('country-btn')) {
+				btn.addEventListener('mouseenter', () => {
+					for (let plan of plansCountry) {
+						plan.classList.add('hover');
+					}
+				});
+				btn.addEventListener('mouseleave', () => {
+					for (let plan of plansCountry) {
+						plan.classList.remove('hover');
+					}
+				});
+				btn.addEventListener('click', () => {
+					btn.classList.toggle('active');
+					for (let plan of plansCountry) {
+						plan.classList.toggle('active');
+					}
+				});
+			}
+		}
+	}
+
 	siblingsStatus();
 	readMoreOpen();
 	currentTime();
@@ -637,6 +753,7 @@ jQuery(document).ready(function($) {
 	openSelect();
 	steps();
 	convertWeight();
+	choosePlan();
 
 	AOS.init({
 		duration: 1000,
