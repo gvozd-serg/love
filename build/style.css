@@ -843,8 +843,8 @@ input:checked + label:before {
 /* === END FONTS === */
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?6j5um7");
-  src: url("../fonts/icomoon.eot?6j5um7#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?6j5um7") format("truetype"), url("../fonts/icomoon.woff?6j5um7") format("woff"), url("../fonts/icomoon.svg?6j5um7#icomoon") format("svg");
+  src: url("../assets/fonts/icomoon.eot?6j5um7");
+  src: url("../assets/fonts/icomoon.eot?6j5um7#iefix") format("embedded-opentype"), url("../assets/fonts/icomoon.ttf?6j5um7") format("truetype"), url("../assets/fonts/icomoon.woff?6j5um7") format("woff"), url("../assets/fonts/icomoon.svg?6j5um7#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block; }
@@ -3131,6 +3131,40 @@ $screen-large 1280px
 .services h2 {
   margin-bottom: 20px; }
 
+.plan-description-block .plan-description-holder {
+  margin: 0 0 10px; }
+  @media (min-width: 768px) {
+    .plan-description-block .plan-description-holder {
+      display: flex; } }
+
+.plan-description-block .description-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #21242B;
+  min-height: 243px; }
+  @media (min-width: 768px) {
+    .plan-description-block .description-title {
+      width: 300px; } }
+  .plan-description-block .description-title h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 34px;
+    color: #FFFFFF; }
+
+.plan-description-block .plan-description {
+  background-color: #fff;
+  padding: 70px 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 170%;
+  color: #000; }
+  @media (min-width: 768px) {
+    .plan-description-block .plan-description {
+      font-size: 18px;
+      width: calc(100% - 300px);
+      padding: 70px; } }
+
 .about-hero {
   padding-top: 40px;
   background-color: #F5F5F5; }
@@ -4499,6 +4533,8 @@ $screen-large 1280px
       padding: 50px 35px 10px; } }
   .gallery-section__holder_filter {
     padding-bottom: 100px; }
+  .gallery-section__holder_service {
+    margin-bottom: 100px; }
 
 .gallery-section__block {
   text-align: center; }
@@ -4631,6 +4667,14 @@ $screen-large 1280px
   font-weight: 500;
   font-size: 15px;
   line-height: 150%; }
+
+.plan-description-block h2 {
+  font-weight: 600;
+  font-size: 22px;
+  font-family: "Montserrat";
+  line-height: 34px;
+  text-transform: uppercase;
+  margin: 0 0 30px; }
 
 .documents-block {
   display: flex;
@@ -5378,5 +5422,82 @@ $screen-large 1280px
   .add-to-favorites i {
     font-size: 32px;
     margin-right: 10px; }
+
+.profile-slider {
+  background-color: #1F232B;
+  background-repeat-y: no-repeat;
+  background-size: contain;
+  background-position: 0 100%; }
+  .profile-slider .ladies__slider-holder {
+    padding-bottom: 210px; }
+  .profile-slider .swiper-slide {
+    width: 264px; }
+    .profile-slider .swiper-slide .img-wrap {
+      max-width: 234px; }
+  @media (min-width: 768px) {
+    .profile-slider .changing.swiper-slide-active .img-wrap, .profile-slider .changed.swiper-slide-active .img-wrap {
+      transform: scale(1.7); } }
+  .profile-slider .slick-arrow__prev {
+    left: -35px;
+    top: 51%; }
+  .profile-slider .slick-arrow__next {
+    right: -35px;
+    top: 51%; }
+  .profile-slider .container {
+    overflow: hidden; }
+
+.profile__title-holder {
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  padding: 70px 30px;
+  display: flex;
+  justify-content: center; }
+  .profile__title-holder:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1F1F1F;
+    opacity: 0.6;
+    z-index: 1; }
+
+.profile__title {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "lora";
+  font-weight: 600;
+  font-size: 30px;
+  color: #FFF; }
+  .profile__title span {
+    display: inline-block;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 28px;
+    background-color: #B09762;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    margin-right: 25px; }
+
+.profile__list {
+  padding: 50px 0;
+  column-count: 2; }
+  .profile__list span {
+    display: inline-block;
+    margin-right: 10px; }
+  .profile__list ul li::before {
+    width: 10px;
+    height: 1px;
+    border-radius: 0;
+    top: 13px; }
 
 /*# sourceMappingURL=style.css.map */
