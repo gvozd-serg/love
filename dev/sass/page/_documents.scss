@@ -3,13 +3,14 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 30px 0 30px 42px;
+  padding: 30px 20px 42px;
   background-color: #F7F6F8;
   margin-bottom: 10px;
   overflow: hidden;
 
   @include media('>=tablet') {
 	justify-content: space-between;
+	padding: 30px 0 30px 42px;
   }
 
   &:last-of-type {
@@ -35,6 +36,11 @@
 
   .documents-title {
 
+	@include media('<991px') {
+	  margin-bottom: 20px;
+	  width: 100%;
+	}
+
 	strong {
 	  font-weight: 600;
 	  font-size: 20px;
@@ -53,6 +59,10 @@
 
   .btn {
 	background-color: #F7F6F8;
+
+	@include media('<768px') {
+	  margin-bottom: 30px;
+	}
 
 	&:hover {
 	  background-color: #B09762;
@@ -105,12 +115,24 @@
 
 	  & + .pseudo-bg {
 		position: absolute;
-		top: -500px;
-		right: 0;
-		bottom: -500px;
-		left: 0;
+		top: -20px;
+		right: -100vw;
+		bottom: -20px;
+		left: -100vw;
 		z-index: 0;
 		transition: all ease-in-out 0.3s;
+
+		@include media('>=768px') {
+		  right: -20px;
+		  left: -20px;
+		}
+
+		@include media('>=1280px') {
+		  top: -500px;
+		  right: 0;
+		  bottom: -500px;
+		  left: 0;
+		}
 	  }
 	}
 
@@ -132,6 +154,7 @@
   .img-holder {
 	width: 100%;
 	max-width: 500px;
+	height: auto;
 
 	@include media('>=tablet') {
 	  margin-right: 40px;

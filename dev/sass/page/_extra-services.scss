@@ -1,9 +1,14 @@
 .extra-services-block {
   width: 100%;
   overflow-x: auto;
+  overflow-y: hidden;
   margin-bottom: 40px;
 
   &.services-plan {
+	&::-webkit-scrollbar {
+	  width: 0;
+	}
+
 	table {
 
 	  .plans-cost {
