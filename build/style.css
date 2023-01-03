@@ -77,6 +77,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
   .markup .gradient-default:hover {
     background: radial-gradient(red, transparent); }
 
+input {
+  font-family: "Montserrat"; }
+  input::placeholder {
+    font-family: "Montserrat"; }
+
 body {
   color: #212121;
   font-size: 16px;
@@ -421,7 +426,6 @@ input:checked + label:before {
   padding-right: 15px; }
 
 .scroll, .content-holder table {
-  overflow-y: scroll;
   overflow-x: hidden; }
   .scroll_x, .content-holder table {
     overflow-x: scroll;
@@ -5765,7 +5769,7 @@ $screen-large 1280px
     .video-consul__holder {
       padding: 50px 40px 70px; } }
 
-.video-consul__descrioption {
+.video-consul__description {
   max-width: 992px;
   margin: 0 auto 40px;
   font-weight: 600;
@@ -5779,8 +5783,12 @@ $screen-large 1280px
 
 .video-consul__grid {
   display: grid;
-  grid-template-columns: 160px 140px 184px 120px 208px 348px 348px;
-  grid-template-rows: auto; }
+  grid-template-columns: 160px 140px 195px 120px 208px 348px 348px;
+  grid-template-rows: auto;
+  position: relative;
+  border-bottom: 10px solid #fff; }
+  .video-consul__grid:first-child {
+    border: none; }
 
 .video-consul__title {
   background-color: #B09762;
@@ -5791,8 +5799,33 @@ $screen-large 1280px
   padding: 40px 0 40px 40px;
   font-family: "lora"; }
 
+.video-consul .img-holder {
+  width: 120px;
+  height: 120px; }
+
 .video-consul__info {
   padding: 40px 0 40px 40px; }
+  .video-consul__info .input-holder {
+    position: relative;
+    margin-bottom: 30px; }
+    .video-consul__info .input-holder i {
+      position: absolute;
+      bottom: 12px;
+      right: 12px; }
+  .video-consul__info_ladies-feedback {
+    padding-right: 30px; }
+  .video-consul__info input, .video-consul__info select {
+    background-color: #fff;
+    border: 1px solid #fff;
+    outline: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 0; }
+    .video-consul__info input::placeholder, .video-consul__info select::placeholder {
+      color: #9D9EA8; }
   .video-consul__info_photo .img-wrap {
     overflow: hidden;
     width: 120px;
@@ -5802,7 +5835,7 @@ $screen-large 1280px
     flex-direction: column; }
     .video-consul__info_name strong {
       display: inline-block;
-      margin-bottom: 15px;
+      margin-bottom: 13px;
       font-weight: 600;
       font-size: 15px;
       line-height: 164%; }
@@ -5818,11 +5851,20 @@ $screen-large 1280px
       font-size: 15px;
       line-height: 164%;
       color: #B09762; }
+  .video-consul__info_time .input-holder {
+    text-align: center;
+    margin-bottom: 15px; }
+    .video-consul__info_time .input-holder label {
+      color: #838383;
+      font-size: 14px;
+      line-height: 125%; }
+    .video-consul__info_time .input-holder input[type="time"] {
+      height: 40px; }
   .video-consul__info .text-holder {
     padding: 14px;
     background-color: #fff; }
     .video-consul__info .text-holder .scroll, .video-consul__info .text-holder .content-holder table, .content-holder .video-consul__info .text-holder table {
-      height: 150px; }
+      height: 122px; }
     .video-consul__info .text-holder p {
       outline: none; }
 

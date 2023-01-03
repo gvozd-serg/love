@@ -454,7 +454,7 @@
 	}
   }
 
-  &__descrioption {
+  &__description {
 	max-width: 992px;
 	margin: 0 auto 40px;
 	font-weight: 600;
@@ -466,12 +466,18 @@
 	overflow-x: auto;
 	overflow-y: hidden;
 	background-color: #F7F6F8;
-  }
+}
 
-  &__grid {
+&__grid {
 	display: grid;
-	grid-template-columns: 160px 140px 184px 120px 208px 348px 348px;
+	grid-template-columns: 160px 140px 195px 120px 208px 348px 348px;
 	grid-template-rows: auto;
+	position: relative;
+	border-bottom: 10px solid $white;
+
+	&:first-child {
+		border: none;
+	}
   }
 
   &__title {
@@ -484,8 +490,45 @@
 	font-family: $font-secondary;
   }
 
+  .img-holder {
+	width: 120px;
+	height: 120px;;
+  }
+
   &__info {
 	padding: 40px 0 40px 40px;
+
+	.input-holder {
+		position: relative;
+		margin-bottom: 30px;
+
+		i {
+			position: absolute;
+			bottom: 12px;
+    		right: 12px;
+		}
+
+	}
+	
+	&_ladies-feedback {
+		padding-right: 30px;
+	}
+
+	input, select {
+		background-color: $white;
+		border: 1px solid $white;
+		outline: none;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 18px;
+		padding: 10px 15px;
+		width: 100%;
+		border-radius: 0;
+
+		&::placeholder {
+		  color: #9D9EA8;
+		}
+	}
 
 	&_photo {
 	  .img-wrap {
@@ -501,7 +544,7 @@
 
 	  strong {
 		display: inline-block;
-		margin-bottom: 15px;
+		margin-bottom: 13px;
 		font-weight: 600;
 		font-size: 15px;
 		line-height: 164%;
@@ -524,12 +567,29 @@
 	  }
 	}
 
+	&_time {
+		.input-holder {
+			text-align: center;
+			margin-bottom: 15px;
+
+			label {
+				color: #838383;
+				font-size: 14px;
+				line-height: 125%;
+			}
+
+			input[type="time"] {
+				height: 40px;
+			}
+		}
+	}
+
 	.text-holder {
 	  padding: 14px;
 	  background-color: #fff;
 
 	  .scroll {
-		height: 150px;
+		height: 122px;
 	  }
 
 	  p {
@@ -538,3 +598,4 @@
 	}
   }
 }
+

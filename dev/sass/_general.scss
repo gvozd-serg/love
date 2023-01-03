@@ -89,6 +89,14 @@
   }
 }
 
+input {
+	font-family: $font-primary;
+
+	&::placeholder {
+		font-family: $font-primary;
+	}
+}
+
 body {
   color: $color;
   font-size: $font-size;
@@ -517,7 +525,6 @@ input:checked+label {
 }
 
 .scroll {
-  overflow-y: scroll;
   overflow-x: hidden;
 
   &_x {
