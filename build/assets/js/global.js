@@ -222,7 +222,7 @@ jQuery(document).ready(function($) {
 		hh = hh < 10 ? `0${hh}` : hh;
 		mm = mm < 10 ? `0${mm}` : mm;
 
-		let time = `${hh}<span class="blink">:</span>${mm}`;
+		let time = `${hh}<span>:</span>${mm}<span class="blink">:</span>${ss}`;
 
 		for (let elem of elements) {
 			elem.innerHTML = time;
@@ -258,11 +258,13 @@ jQuery(document).ready(function($) {
 	}
 
 	const datePicker = () => {
-		$( ".date-picker" ).datepicker({
+		$(".date-picker").datepicker({
 			changeMonth: true,
 			changeYear: true,
 		});
 	}
+
+	console.log(datePicker())
 
 	const mask = () => {
 		$(".phone").inputmask({"mask": "(999) 999-99-99"});
@@ -537,26 +539,26 @@ jQuery(document).ready(function($) {
 
 				const stepsFormInputs = e.target.closest('.js-steps-form').querySelectorAll('.input-required');
 
-				// for (let el of stepsFormInputs) {
-				// 	if(el.type == 'text') {
-				// 		if (el.value.length == 0) {
-				//
-				// 			el.classList.add('error');
-				// 		} else {
-				// 			el.classList.remove('error');
-				// 			el.setAttribute("data-valid", "valid");
-				// 			validArr.push(el);
-				// 		}
-				//
-				// 		el.addEventListener('change', (e) => {
-				// 			if (e.target.value) {
-				// 				el.classList.remove('error');
-				// 				el.setAttribute("data-valid", "valid");
-				// 				validArr.push(el);
-				// 			}
-				// 		})
-				// 	}
-				// }
+				for (let el of stepsFormInputs) {
+					if(el.type == 'text') {
+						if (el.value.length == 0) {
+
+							el.classList.add('error');
+						} else {
+							el.classList.remove('error');
+							el.setAttribute("data-valid", "valid");
+							validArr.push(el);
+						}
+
+						el.addEventListener('change', (e) => {
+							if (e.target.value) {
+								el.classList.remove('error');
+								el.setAttribute("data-valid", "valid");
+								validArr.push(el);
+							}
+						})
+					}
+				}
 
 				if (stepsFormInputs.length === validArr.length) {
 					stepsModal.classList.add('active');
@@ -737,6 +739,11 @@ jQuery(document).ready(function($) {
 		}
 	}
 
+	const videoText = () => {
+
+	}
+
+	videoText();
 	siblingsStatus();
 	readMoreOpen();
 	currentTime();

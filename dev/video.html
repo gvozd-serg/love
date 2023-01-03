@@ -1,0 +1,98 @@
+@@include('templates/head.html')
+@@include('templates/header-pc.html')
+<main class="wrapper public-profile-page">
+	<section class="dashboard">
+		<div class="container container_xl container_df profile-title">
+			<div class="breadcrumbs">
+				<ul class="breadcrumbs__list">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">My personal account</a></li>
+					<li><span>Video consultation </span></li>
+				</ul>
+				<h1 class="dashboard-title">Video consultation </h1>
+			</div>
+		</div>
+	</section>
+	<section class="video-consul">
+		<div class="container container_lg">
+			<div class="video-consul__holder">
+				<div class="video-consul__description">
+					<p>We are very responsible in our selection of both girls a men. That is why in order to make our cooperation as effective as possible you have to fill in and send a questionnaire, as well as to schedule and pass on interview with a matchmaker</p>
+				</div>
+				<div class="video-consul__grid-holder">
+					<div class="video-consul__grid">
+						<div class="video-consul__title">Photo</div>
+						<div class="video-consul__title">Name, ID</div>
+						<div class="video-consul__title">Date</div>
+						<div class="video-consul__title">Time</div>
+						<div class="video-consul__title">Video room</div>
+						<div class="video-consul__title">Your feedback</div>
+						<div class="video-consul__title">Ladie's feedback</div>
+					</div>
+					<div class="video-consul__grid">
+						<div class="video-consul__info video-consul__info_photo">
+							<div class="img-holder">
+								<img src="./assets/img/ladies-img-2.jpeg" alt="image description">
+							</div>
+						</div>
+						<div class="video-consul__info video-consul__info_name">
+							<strong>Anastasia</strong>
+							<span>ID 4567820</span>
+							<a href="#">Profile page</a>
+						</div>
+						<div class="video-consul__info video-consul__info_date">
+							<div class="input-holder">
+								<input type="text" class="date-picker input-required hasDatepicker" placeholder="mm/dd/yyyy">
+								<i class="icomoon-calendar"></i>
+							</div>
+						</div>
+						<div class="video-consul__info video-consul__info_time">
+							<div class="input-holder">
+								<input id="your-time" type="time">
+								<label for="your-time">Your time</label>
+							</div>
+							<div class="input-holder">
+								<input id="her-time" type="time">
+								<label for="her-time">Her time</label>
+							</div>
+						</div>
+						<div class="video-consul__info video-consul__info_room">
+							<div class="input-holder">
+								<div class="text-holder">
+									<div class="scroll">
+										<p contenteditable="true"><span>Room link</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="video-consul__info video-consul__info_feedback">
+							<div class="input-holder">
+								<div class="text-holder">
+									<div class="scroll">
+										<p contenteditable="true"><span>Type your message</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="btn-holder">
+								<button class="btn btn-primary">Submit</button>
+							</div>
+						</div>
+						<div class="video-consul__info video-consul__info_ladies-feedback">
+							<div class="input-holder">
+								<div class="text-holder">
+									<div class="scroll">
+										<p contenteditable="true"><span>Type your message</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="btn-holder">
+								<button class="btn btn-primary">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+@@include('templates/footer-dashboard.html')
