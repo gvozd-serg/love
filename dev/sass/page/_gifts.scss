@@ -6,6 +6,12 @@
 	padding-top: 20px;
 	margin: 0 -10px;
 
+	@include media('>=600px') {
+		position: absolute;
+		right: 20px;
+		bottom: -130px;
+	}
+
 	@include media('>=tablet') {
 		padding-top: 40px;
 	}

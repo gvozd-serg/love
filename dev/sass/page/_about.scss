@@ -286,6 +286,8 @@
 
 		strong {
 			font-weight: 600;
+			display: block;
+			margin-top: 20px;
 		}
 	}
 
@@ -330,10 +332,7 @@
 
 		.img-holder {
 			border: 2px solid #fff;
-
-			@include media('>=tablet') {
-				margin-bottom: 30px;
-			}
+			margin-bottom: 30px;
 		}
 
 		strong {
@@ -388,7 +387,7 @@
 	.container {
 		@include media('>=tablet') {
 			display: flex;
-			align-items: center;
+			// align-items: center;
 		}
 	}
 }

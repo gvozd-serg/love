@@ -9,7 +9,7 @@
 	background-position: 0 100%;
 
 	.ladies__slider-holder {
-		padding: 80px 0 0;
+		padding: 0;
 
 		@include media('>=tablet') {
 			padding: 30px 0 176px;
@@ -158,8 +158,9 @@
 			line-height: 28px;
 			background-color: #B09762;
 			border-radius: 50%;
-			width: 28px;
+			max-width: 28px;
 			height: 28px;
+			width: 100%;
 			text-align: center;
 			margin-right: 25px;
 		}
@@ -329,7 +330,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 25px;
+		padding: 15px;
 
 		@include media('>=tablet') {
 			width: 300px;
@@ -362,6 +363,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	list-style: none;
+	justify-content: center;
+	background-color: #B09762;
 
 	li {
 		text-align: center;
@@ -517,7 +520,6 @@
 		grid-template-columns: 160px 140px 195px 120px 208px 348px 348px;
 		grid-template-rows: auto;
 		position: relative;
-		border-bottom: 10px solid $white;
 
 		&:first-child {
 			border: none;
@@ -537,11 +539,11 @@
 	.img-holder {
 		width: 120px;
 		height: 120px;
-		;
 	}
 
 	&__info {
 		padding: 40px 0 40px 40px;
+		border-bottom: 10px solid $white;
 
 		.input-holder {
 			position: relative;

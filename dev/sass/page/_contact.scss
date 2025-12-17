@@ -262,3 +262,12 @@
     border: none;
 	margin: 25px 0 0;
 }
+
+.wpcf7 form.invalid .wpcf7-response-output {
+	background: rgba(204, 0, 4, .5);
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #c00;
+	margin: 25px 0 0;
+	color: #fff;
+}

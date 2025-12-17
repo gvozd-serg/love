@@ -202,10 +202,11 @@
 		}
 	}
 
-	.img-title {
-		font-weight: 500;
-		font-size: 15px;
-		line-height: 150%;
+	strong.img-title {
+		font-weight: 500 !important;
+		font-size: 15px !important;
+		line-height: 150% !important;
+		font-family: $font-primary !important;
 	}
 }
 
