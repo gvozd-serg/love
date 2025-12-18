@@ -1,0 +1,34 @@
+.for-ladies {
+	.breadcrumbs  {
+		background-color: #fff;
+	}
+
+	.description {
+		font-size: 20px;
+		line-height: 1.7;
+		font-weight: 500;
+		
+		p {
+			margin: 0 0 44px;
+		}
+	}
+
+	@include media('>=1024px') {
+		.ladies-info-heading {
+			.title {
+				margin: 0 0 46px;
+			}
+		}
+	}
+}
+
+.membership-path {
+	background-color: #F7F6F8;
+
+
+	@include media('>=1024px') {
+		&.section_sm {
+			padding: 100px 0;
+		}
+	}
+}

@@ -3321,6 +3321,26 @@ $screen-large 1280px
     .official-offer .title-holder {
       text-align: left; } }
 
+.for-ladies .breadcrumbs {
+  background-color: #fff; }
+
+.for-ladies .description {
+  font-size: 20px;
+  line-height: 1.7;
+  font-weight: 500; }
+  .for-ladies .description p {
+    margin: 0 0 44px; }
+
+@media (min-width: 1024px) {
+  .for-ladies .ladies-info-heading .title {
+    margin: 0 0 46px; } }
+
+.membership-path {
+  background-color: #F7F6F8; }
+  @media (min-width: 1024px) {
+    .membership-path.section_sm {
+      padding: 100px 0; } }
+
 .hero-section {
   background-color: #1F232B;
   min-height: 240px;
@@ -6399,5 +6419,49 @@ $screen-large 1280px
       height: 122px; }
     .video-consul__info .text-holder p {
       outline: none; }
+
+.logo-block a img {
+  max-height: 115px; }
+
+@media (min-width: 1024px) {
+  .footer .logo-holder {
+    width: 70%; }
+  .footer .contact-holder {
+    width: 30%; }
+  .footer .logo-holder .logo-block {
+    margin-right: 35px; } }
+
+.plans__wrap {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.plans__wrap .plans__item {
+  max-width: 400px; }
+
+.plans__wrap .plans__item .plans__title {
+  background-color: #1F232B;
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px; }
+
+.plans__wrap .plans__item .plans__title .title_2 {
+  color: #B09762;
+  text-transform: uppercase;
+  margin: 0; }
+
+.plans__wrap .plans__item .plans__description {
+  background-color: #FFF;
+  padding: 25px 20px 35px; }
+
+.plans__wrap .plans__item .text-holder {
+  min-height: 116px; }
+
+.plans__wrap .plans__item .btn-primary {
+  width: calc(100% - 32px); }
 
 /*# sourceMappingURL=style.css.map */
